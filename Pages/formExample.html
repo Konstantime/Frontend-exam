@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="cript" method="post">
+      <fieldset>
+        <legend>legend Типа Заголовок Рамки</legend>
+        <p>рамка</p>
+        <label for="test"> label тестируем</label>
+        <input id="test" type="file" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Выбор по радио</legend>
+        <label for="sex">Выберите пол</label>
+
+        <p>
+          <label for="man">Мужчина</label>
+          <input type="radio" id="man" name="sexUser" value="Мужчина" />
+        </p>
+        <p>
+          <label for="women">Женщина</label>
+          <input type="radio" id="woman" name="sexUser" value="Женщина" />
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Ползунок</legend>
+        <input type="range" min="0" max="100" />
+      </fieldset>
+
+      <button type="submit" value="отправить">Отправить</button>
+    </form>
+  </body>
+</html>
