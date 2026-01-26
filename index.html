@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -63,11 +63,11 @@
       </p>
     </section>
 
-    <section>
+    <section class="section html-css">
       <h2>Вопросы по HTML и CSS</h2>
       <div>
         <div>
-          <section>
+          <div class="exam--card">
             <h4>
               1. Что такое doctype? Рассказать про head, meta, title, body.
             </h4>
@@ -99,9 +99,9 @@
               Элемент body содержит весь видимый контент: текст, изображения,
               формы и другие элементы.
             </p>
-          </section>
+          </div>
 
-          <section>
+          <div class="exam--card">
             <h4>
               2. Для чего нужны атрибуты name и value в элементах формы (в
               input, select и т.д).
@@ -113,64 +113,71 @@
               value определяют, как данные передаются: name — ключ (имя поля),
               value — значение.
             </p>
-          </section>
+          </div>
 
-          <section>
+          <div class="exam--card">
             <h4>
               3. Что такое HTML-формы? Опишите основные элементы формы (form,
               label, fieldset, legend) и их роль. Как работает отправка формы
               (method: GET/POST, action). Как сделать так, чтоб можно было
               отправлять файлы на сервер.
             </h4>
-            <p>
-              HTML‑форма — это контейнер, который собирает значения полей
-              (input, select и т.д.) и отправляет их на сервер по HTTP‑запросу.
-            </p>
-            <p>
-              form — блок, внутри которого находятся элементы формы. action и
-              method - его обязательные атрибуты. <br />
-              action — URL обработчика на сервере(Скрипта) (куда пойдёт запрос).
-              <br />
-              method — HTTP‑метод отправки: GET или POST. Пример: <br />
-              &lt;form action="/submit" method="post"&gt; <br />
-              ... <br />
-              &lt;/form &gt;
-            </p>
+            <div class="subtopic">
+              <p>
+                HTML‑форма — это контейнер, который собирает значения полей
+                (input, select и т.д.) и отправляет их на сервер по
+                HTTP‑запросу.
+              </p>
+              <p>
+                form — блок, внутри которого находятся элементы формы. action и
+                method - его обязательные атрибуты. <br />
+                action — URL обработчика на сервере(Скрипта) (куда пойдёт
+                запрос).
+                <br />
+                method — HTTP‑метод отправки: GET или POST. Пример: <br />
+                &lt;form action="/submit" method="post"&gt; <br />
+                ... <br />
+                &lt;/form &gt;
+              </p>
+            </div>
+            <div class="subtopic">
+              <h5>Элементы формы</h5>
+              <p>
+                &lt;label&gt; — подпись для поля ввода. Кликаешь по надписи —
+                фокус попадает в соответствующий input, плюс это критично для
+                пользователей с особенностями восприятия. Без связки for и id
+                скриптридеры не смогут с ними работать. Связь делается через for
+                и id: <br />
 
-            <h5>Элементы формы</h5>
-            <p>
-              &lt;label&gt; — подпись для поля ввода. Кликаешь по надписи —
-              фокус попадает в соответствующий input, плюс это критично для
-              пользователей с особенностями восприятия. Без связки for и id
-              скриптридеры не смогут с ними работать. Связь делается через for и
-              id: <br />
+                fieldset — логическая группа полей внутри формы. <br />
+                Используется, когда много связанных полей (например, «Личные
+                данные», «Адрес»). <br />
 
-              fieldset — логическая группа полей внутри формы. <br />
-              Используется, когда много связанных полей (например, «Личные
-              данные», «Адрес»). <br />
+                legend — заголовок группы полей; должен быть первым ребёнком
+                внутри fieldset. <br />
+              </p>
 
-              legend — заголовок группы полей; должен быть первым ребёнком
-              внутри fieldset. <br />
-            </p>
-
-            <p>
-              &lt;fieldset&gt;<br />
-                  &lt;legend&gt;Выбор по радио&lt;/legend&gt;<br />
-                  &lt;label for=&quot;sex&quot;&gt;Выберите пол&lt;/label&gt;<br />
-                  <br />
-                  &lt;p&gt;<br />
-                      &lt;label for=&quot;man&quot;&gt;Мужчина&lt;/label&gt;<br />
-                      &lt;input type=&quot;radio&quot; id=&quot;man&quot;
-              name=&quot;sexUser&quot; value=&quot;Мужчина&quot; /&gt;<br />
-                  &lt;/p&gt;<br />
-                  &lt;p&gt;<br />
-                      &lt;label
-              for=&quot;women&quot;&gt;Женщина&lt;/label&gt;<br />
-                      &lt;input type=&quot;radio&quot; id=&quot;woman&quot;
-              name=&quot;sexUser&quot; value=&quot;Женщина&quot; /&gt;<br />
-                  &lt;/p&gt;<br />
-              &lt;/fieldset&gt;
-            </p>
+              <p>
+                &lt;fieldset&gt;<br />
+                    &lt;legend&gt;Выбор по радио&lt;/legend&gt;<br />
+                    &lt;label for=&quot;sex&quot;&gt;Выберите
+                пол&lt;/label&gt;<br />
+                    <br />
+                    &lt;p&gt;<br />
+                        &lt;label
+                for=&quot;man&quot;&gt;Мужчина&lt;/label&gt;<br />
+                        &lt;input type=&quot;radio&quot; id=&quot;man&quot;
+                name=&quot;sexUser&quot; value=&quot;Мужчина&quot; /&gt;<br />
+                    &lt;/p&gt;<br />
+                    &lt;p&gt;<br />
+                        &lt;label
+                for=&quot;women&quot;&gt;Женщина&lt;/label&gt;<br />
+                        &lt;input type=&quot;radio&quot; id=&quot;woman&quot;
+                name=&quot;sexUser&quot; value=&quot;Женщина&quot; /&gt;<br />
+                    &lt;/p&gt;<br />
+                &lt;/fieldset&gt;
+              </p>
+            </div>
 
             <h5>Как работает отправка формы (GET / POST, action)</h5>
             <p>
@@ -256,9 +263,9 @@
 
               Без этого атрибута файл нормально на сервер не дойдёт.
             </p>
-          </section>
+          </div>
 
-          <section>
+          <section class="exam--card">
             <h4>
               4. Что такое семантическая верстка, зачем нужна. Рассказать про
               article, section, footer, header, aside, nav, figure. Зачем нужны
@@ -318,7 +325,7 @@
             </ol>
           </section>
 
-          <section>
+          <section class="exam--card">
             <h4>
               5. В контексте CSS. Что такое БЭМ, зачем нужен. Привести примеры.
               Что такое внешняя геометрия и почему БЕМ ее запрещает. Плюсы и
@@ -492,7 +499,7 @@
             </p>
           </section>
 
-          <section>
+          <section class="exam--card">
             <h4>
               6. Каскад, Специфичность (таблица), Наследование. 3 фактора.
             </h4>
@@ -538,7 +545,11 @@
               Если на элемент действуют два правила с разной специфичностью,
               победит более специфичный селектор. ​
             </p>
-            <img src="images/TableSpecific.jpg" alt="Таблица специфичности" />
+            <img
+              width="100%"
+              src="images/TableSpecific.jpg"
+              alt="Таблица специфичности"
+            />
 
             <div>
               <h5>Наследование</h5>
@@ -602,7 +613,7 @@
             </p>
           </section>
 
-          <section>
+          <section class="exam--card">
             <h4>
               7. Блочная модель, строчные элементы. Стандартная блочная модель
               CSS. Альтернативная блочная модель CSS.
@@ -695,7 +706,7 @@
             </div>
           </section>
 
-          <div>
+          <div class="exam--card">
             <h4>
               8. Рассказать про свойство border, margin, padding, схлопывание,
               max(min)-width-height.
@@ -789,7 +800,7 @@
               </ul>
             </div>
           </div>
-          <div>
+          <div class="exam--card">
             <h4>
               9. Привести примеры: Селекторы, псевдоклассы, псевдоэлементы.
             </h4>
@@ -891,7 +902,7 @@
             </p>
           </div>
 
-          <div>
+          <div class="exam--card">
             <h4>10. Перечислить единицы измерения. Различия em и rem.</h4>
             <h5>Относительные (те что измеряются относительно чего-либо)</h5>
             <ul>
@@ -943,7 +954,7 @@
               </li>
             </ul>
           </div>
-          <div>
+          <div class="exam--card">
             <h4>
               11. Рассказать про Flexbox. flex-container, flex Items, shrink,
               grow.
@@ -1052,7 +1063,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="exam--card">
             <h4>12. Рассказать про CSS Grid.</h4>
             <a href="https://youtu.be/JrKOHNRnRMg?si=h0XrAtxVMVmOF9C8"
               >Видос про Gridы</a
@@ -1151,7 +1162,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="exam--card">
             <h4>
               13. Позиционирование. (absolute, relative, sticky, fixed).
               Нормальный поток в документе
@@ -1298,7 +1309,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="exam--card">
             <h4>
               14. Рассказать про z-index, контекст наложения и свойство
               overflow.
@@ -1406,7 +1417,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="exam--card">
             <h4>
               15. CSS для типографии. (font-size, line-height и т.д) Как
               подключать шрифты на сайт.
@@ -1680,7 +1691,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="exam--card">
             <h4>
               16. CSS custom properties - CSS calc (функции сalc и var). Функции
               сlamp() для fluid typography, min(), max(). Как они помогают в
@@ -1945,7 +1956,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="exam--card">
             <h4>
               17. Что такое Адаптивная верстка, резиновая верстка. Breakpoints.
               В чем различия desktop first и mobile first. Что такое
@@ -2256,6 +2267,7 @@
                 верстке сайтов.
               </p>
               <img
+                width="100%"
                 src="images/centrovka.jpg"
                 alt="Пример центрирования контента"
               />
@@ -2391,7 +2403,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="exam--card">
             <h4>
               18. Изображения. Рассказать про основные атрибуты, зачем указывать
               width - height, alt. Адаптивные изображения (srcset и sizes).
@@ -2593,7 +2605,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="exam--card">
             <h4>
               19. Ссылки в HTML: атрибуты href, target, rel (nofollow,
               noopener). Что такое якорные ссылки (#id) и как они работают.
@@ -2755,7 +2767,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="exam--card">
             <h4>
               20. Как встраивать SVG в HTML. Преимущества SVG над растровыми
               изображениями. Анимация SVG с CSS.
@@ -2828,14 +2840,6 @@
                     компании&quot; width=&quot;120&quot;
                     height=&quot;120&quot;&gt;
                   </p>
-                  <div>
-                    <img
-                      src="icon.svg"
-                      alt="Логотип компании"
-                      width="120"
-                      height="120"
-                    />
-                  </div>
                   <ul>
                     <li>
                       Просто как картинка, хорошо кешируется браузером, но
@@ -2983,16 +2987,18 @@
       </div>
     </section>
 
-    <section>
+    <section class="section js">
       <h3>Вопросы по JS</h3>
-      <div>
-        <h4>Function Declaration - Function Expression. Стрелочные функции.</h4>
-        <div>
+      <div class="exam--card">
+        <h4>
+          1. Function Declaration - Function Expression. Стрелочные функции.
+        </h4>
+        <div class="subtopic">
           <h5>Function Declaration</h5>
           <p>
             это объявление функции отдельной инструкцией `function`, её можно
-            вызывать **до и после** места объявления из того же блока, потому
-            что она поднимается (hoisting).
+            вызывать до и после места объявления из того же блока, потому что
+            она поднимается (hoisting).
           </p>
           <p>
             Синтаксис: <br />
@@ -3011,13 +3017,13 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h5>Function Expression</h5>
           <p>
             это когда функция создаётся как значение в выражении и, например,
             присваивается в переменную. Работает как обычное значение; функцию
-            можно передавать, хранить в массиве и т.д. Вызывать можно **только
-            после** строки, где она создана.
+            можно передавать, хранить в массиве и т.д. Вызывать можно только
+            после строки, где она создана.
           </p>
           <p>
             Синтаксис: <br />
@@ -3047,13 +3053,13 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h5>Стрелочные функции</h5>
           <p>
             это укороченный синтаксис function expression, всегда выражение,
             пишется через `=>`, часто используется как коллбэк (в `map`,
-            `filter`, обработчиках событий). У стрелочных функций **нет своего
-            `this`**, `arguments`, `new`, они берут `this` снаружи.
+            `filter`, обработчиках событий). У стрелочных функций нет своего
+            `this`, `arguments`, `new`, они берут `this` снаружи.
           </p>
           <p>
             Синтаксис: <br /><br />
@@ -3081,7 +3087,7 @@
             const sayHi = () => console.log("Hi");
           </p>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Что важно подчеркнуть на экзамене</h4>
           <ol>
             <li>
@@ -3108,8 +3114,7 @@
               Стрелочные функции
               <ul>
                 <li>
-                  Это всегда **function expression**: `const f = (...) => { ...
-                  }`.
+                  Это всегда function expression: `const f = (...) => { ... }`.
                 </li>
                 <li>Более короткий синтаксис, удобно для коллбэков.</li>
                 <li>
@@ -3122,21 +3127,20 @@
           </ol>
         </div>
       </div>
-      <div>
+      <div class="exam--card">
         <h4>
-          Функция высшего порядка. Чистая функция. Побочный эффект. Колбэки.
+          2. Функция высшего порядка. Чистая функция. Побочный эффект. Колбэки.
           Замыкание.
         </h4>
-        <div>
+        <div class="subtopic">
           <h5>Функция высшего порядка (Higher-order function)</h5>
           <p>
             Определение: функция высшего порядка — это функция, которая либо
-            **принимает другую функцию как аргумент**, либо **возвращает функцию
-            как результат** (или и то, и другое).
+            принимает другую функцию как аргумент, либо возвращает функцию как
+            результат (или и то, и другое).
           </p>
-          <p>
-            Пример 1 — принимает функцию (колбэк): <br /><br />
-
+          <p>Пример 1 — принимает функцию (колбэк): <br /><br /></p>
+          <p class="code--block" data-lang="JS">
             function repeat(times, callback) { <br />
             for (let i = 0; i < times; i++) { <br />
             callback(i); <br />
@@ -3155,7 +3159,8 @@
           <p>
             Пример 2 — возвращает функцию: <br />
             <br />
-
+          </p>
+          <p class="code--block" data-lang="JS">
             function makeMultiplier(k) { <br />
             return function (x) { <br />
             return x * k; <br />
@@ -3170,7 +3175,7 @@
             функцию.
           </p>
         </div>
-        <div>
+        <div class="subtopic">
           <h5>Чистая функция (Pure function)</h5>
           <p>Определение: чистая функция — это функция, которая:</p>
           <ol>
@@ -3196,7 +3201,7 @@
             <li>Ничего вне себя не трогает.</li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h5>Нечистая функция (антипример):</h5>
           <p>
             let count = 0; <br />
@@ -3208,7 +3213,7 @@
             }
           </p>
         </div>
-        <div>
+        <div class="subtopic">
           <h5>Побочный эффект (Side effect)</h5>
           <p>
             Определение: побочный эффект — это любое изменение вне локальной
@@ -3216,50 +3221,41 @@
             глобальных переменных, аргументов по ссылке, DOM, запросы к серверу,
             логирование, рандом, работа с временем и т.д.
           </p>
-          <p>
-            Примеры побочных эффектов: <br /><br />
-
+          <p>Примеры побочных эффектов:</p>
+          <p class="code--block" data-lang="JS">
             let state = 0; <br />
             function bad(x) { <br />
             state = x; // мутируем внешнее состояние <br />
             document.body.textContent = x; // меняем DOM <br />
             console.log('done'); // выводим в консоль <br />
             } <br />
-            <br />
-
-            Все эти действия делают функцию нечистой.
           </p>
+          <p>Все эти действия делают функцию нечистой.</p>
         </div>
-        <div>
+        <div class="subtopic">
           <h5>Колбэк (Callback)</h5>
           <p>
             Определение: колбэк — это функция, которую передают в другую функцию
             как аргумент, чтобы та вызвала её позже (как «обратный вызов»).
           </p>
-          <p>
-            Пример с `setTimeout`: <br />
-            <br />
-
+          <p>Пример с `setTimeout`:</p>
+          <p class="code--block" data-lang="JS">
             setTimeout(() => { <br />
             console.log('Прошло 1 секунда'); <br />
             }, 1000); <br />
-            <br />
-
+          </p>
+          <p>
             Анонимная стрелочная функция `() => { ... }` здесь — колбэк, который
             `setTimeout` вызовет спустя 1000 мс.
           </p>
-          <p>
-            Пример с массивом: <br />
-            <br />
-
+          <p>Пример с массивом: <br /></p>
+          <p class="code--block" data-lang="JS">
             const arr = [1, 2, 3]; <br />
             const doubled = arr.map(x => x * 2); // x => x * 2 — колбэк <br />
-            <br />
-
-            `map` — функция высшего порядка, `x => x * 2` — колбэк.
           </p>
+          <p>`map` — функция высшего порядка, `x => x * 2` — колбэк.</p>
         </div>
-        <div>
+        <div class="subtopic">
           <h5>Замыкание (Closure)</h5>
           <p>
             Замыкание — это функция, которая запоминает переменные из внешней
@@ -3314,8 +3310,8 @@
             Внутренняя функция помнит `a` из внешней.
           </p>
         </div>
-        <div>
-          <h5>Как связать всё в один ответ</h5>
+        <div class="subtopic">
+          <h5>Кратко</h5>
           <ul>
             <li>
               Функция высшего порядка — это функция, которая принимает или
@@ -3346,9 +3342,9 @@
         </div>
       </div>
 
-      <div>
-        <h3>Способы создания объектов.</h3>
-        <div>
+      <div class="exam--card">
+        <h3>3. Способы создания объектов.</h3>
+        <div class="subtopic">
           <h4>Литерал объекта</h4>
           <p>
             Определение: самый простой и популярный способ создания объекта —
@@ -3370,7 +3366,7 @@
             <li>Удобен для конфигов, данных, простых сущностей.</li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Конструктор `Object` и `new Object()`</h4>
           <p>
             Определение: создание объекта через встроенный конструктор `Object`.
@@ -3393,7 +3389,7 @@
             <li>На экзамене достаточно упомянуть как один из способов.</li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Функция‑конструктор + `new`</h4>
           <p>
             Определение: функция, которая используется как «шаблон» для создания
@@ -3422,7 +3418,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>`class` (синтаксический сахар над прототипами)</h4>
           <p>
             Определение: ES6‑синтаксис для описания «класса» — более привычный
@@ -3458,7 +3454,7 @@
             <li>В современном коде предпочтительнее конструкторных функций.</li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Object.create(proto)</h4>
           <p>
             Определение: создаёт объект с указанным прототипом. Полезно, когда
@@ -3488,7 +3484,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Кратко, как говорить на экзамене</h4>
           <ol>
             <li>
@@ -3514,9 +3510,9 @@
         </div>
       </div>
 
-      <div>
-        <h3>Способы клонирования объектов.</h3>
-        <div>
+      <div class="exam--card">
+        <h3>4. Способы клонирования объектов.</h3>
+        <div class="subtopic">
           <h4>Поверхностное копирование (shallow copy)</h4>
           <p>
             Копируются только верхнеуровневые свойства; вложенные объекты и
@@ -3561,7 +3557,7 @@
             </li>
           </ol>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Глубокое копирование (deep copy)</h4>
           <p>
             Глубокая копия — когда всё дерево объекта копируется, и вложенные
@@ -3628,7 +3624,7 @@
             </p>
           </ol>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Краткий ответ:</h4>
           <ul>
             <li>
@@ -3660,15 +3656,14 @@
             </li>
           </ul>
         </div>
-        ​
       </div>
 
-      <div>
+      <div class="exam--card">
         <h3>
-          Что такое this. Правила определения this. Рассказать про bind, call,
-          apply.
+          5. Что такое this. Правила определения this. Рассказать про bind,
+          call, apply.
         </h3>
-        <div>
+        <div class="subtopic">
           <h4>this</h4>
           <p>
             this — это ссылка на контекст выполнения функции, то есть на тот
@@ -3692,7 +3687,7 @@
             <li>В методах объекта this обычно указывает на сам объект.</li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Основные правила определения this</h4>
           <ol>
             <li>
@@ -3785,7 +3780,7 @@
           </ol>
         </div>
         ​
-        <div>
+        <div class="subtopic">
           <h4>call, apply, bind</h4>
           <p>Все три метода нужны, чтобы задать this для функции.</p>
           <p>Возьмём базовую функцию:</p>
@@ -3863,7 +3858,7 @@
             </p>
           </div>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Кратко</h4>
           <ul>
             <li>
@@ -3887,12 +3882,12 @@
           </ul>
         </div>
       </div>
-      <div>
+      <div class="exam--card">
         <h3>
-          Что такое DOM? DOM-коллекции. Навигация и поиск. Что такое BOM.
+          6. Что такое DOM? DOM-коллекции. Навигация и поиск. Что такое BOM.
           Location, Cookie, Web Storage.
         </h3>
-        <div>
+        <div class="subtopic">
           <h4>DOM</h4>
           <p>
             DOM (Document Object Model) — это объектное представление
@@ -3909,7 +3904,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>DOM-коллекции, навигация и поиск</h4>
           <p>
             Поиск элементов <br />
@@ -3934,7 +3929,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>DOM-коллекции</h4>
           <ul>
             <li>
@@ -3963,8 +3958,9 @@
             </ul>
             <p>Через эти ссылки можно ходить по дереву от любого узла.</p>
           </div>
+          <img src="images/DOMTree.jpg" alt="DOM-дерево" />
         </div>
-        <div>
+        <div class="subtopic">
           <h4>BOM</h4>
           <p>
             BOM (Browser Object Model) — это объектная модель браузера, набор
@@ -3983,7 +3979,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Location</h4>
           <p>
             location — объект, который описывает адрес текущей страницы (URL) и
@@ -4001,7 +3997,7 @@
             <li>location.reload() – перезагрузить страницу.</li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Cookie</h4>
           <p>
             Cookies — маленькие текстовые данные (пары ключ‑значение), которые
@@ -4024,7 +4020,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Web Storage: localStorage и sessionStorage</h4>
           <p>
             Web Storage — современный API для хранения данных в браузере в виде
@@ -4048,7 +4044,7 @@
             localStorage.clear(); localStorage.length; // количество записей
           </p>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>sessionStorage</h4>
           <ul>
             <li>
@@ -4062,7 +4058,7 @@
             sessionStorage.setItem/getItem/removeItem/clear.
           </p>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Кратко</h4>
           <ul>
             <li>
@@ -4092,13 +4088,13 @@
         </div>
       </div>
 
-      <div>
+      <div class="exam--card">
         <h3>
-          События - всплытие и погружение. Как к элементу прикрепить обработчик
-          события click. Что такое event.target и event.currentTarget, отличия.
-          Делегирование событий.
+          7. События - всплытие и погружение. Как к элементу прикрепить
+          обработчик события click. Что такое event.target и
+          event.currentTarget, отличия. Делегирование событий.
         </h3>
-        <div>
+        <div class="subtopic">
           <h4>Всплытие и погружение</h4>
           <p>
             Событие в DOM проходит две основные фазы: погружение (capturing) и
@@ -4108,9 +4104,9 @@
           </p>
           <p class="code--block" data-lang="HTML">
             &lt;div id=&quot;outer&quot;&gt; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button
-            id=&quot;inner&quot;&gt;Кликни&lt;/button&gt; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+            &nbsp;&nbsp;&lt;button id=&quot;inner&quot;&gt;Кликни&lt;/button&gt;
+            <br />
+            &lt;/div&gt;
           </p>
           <p>Когда пользователь кликает по #inner:</p>
           <ol>
@@ -4129,15 +4125,14 @@
             всплытия.
           </p>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Как повесить обработчик click</h4>
           <p>Современный способ — addEventListener:</p>
           <p class="code--block" data-lang="JS">
             const button = document.getElementById("myBtn"); <br />
             <br />
-
             button.addEventListener("click", (event) => { <br />
-            console.log("Клик по кнопке"); <br />
+            &nbsp;&nbsp;console.log("Клик по кнопке"); <br />
             });
           </p>
           <p>Синтаксис:</p>
@@ -4158,7 +4153,7 @@
             inner.addEventListener("click", handler, false); // bubble
           </p>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>event.target и event.currentTarget</h4>
           <p>Оба свойства есть у объекта события event.</p>
           <h5>event.target</h5>
@@ -4207,7 +4202,7 @@
             </ul>
           </div>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Делегирование событий</h4>
           <p>
             Идея делегирования: вместо того чтобы вешать обработчик на каждый
@@ -4218,13 +4213,13 @@
           <p>Пример: есть список, и нам нужно реагировать на клики по li:</p>
           <p class="code--block" data-lang="HTML">
             &lt;ul id=&quot;list&quot;&gt; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li
-            data-id=&quot;1&quot;&gt;Элемент 1&lt;/li&gt; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li
-            data-id=&quot;2&quot;&gt;Элемент 2&lt;/li&gt; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li
-            data-id=&quot;3&quot;&gt;Элемент 3&lt;/li&gt; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+            &nbsp;&nbsp;&lt;li data-id=&quot;1&quot;&gt;Элемент 1&lt;/li&gt;
+            <br />
+            &nbsp;&nbsp;&lt;li data-id=&quot;2&quot;&gt;Элемент 2&lt;/li&gt;
+            <br />
+            &nbsp;&nbsp;&lt;li data-id=&quot;3&quot;&gt;Элемент 3&lt;/li&gt;
+            <br />
+            &lt;/ul&gt;
           </p>
           <p class="code--block" data-lang="JS">
             const list = document.getElementById("list"); <br />
@@ -4259,7 +4254,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Кратко</h4>
           <ul>
             <li>
@@ -4288,21 +4283,36 @@
         </div>
       </div>
 
-      <div>
-        <h3>Что такое event loop? Макро и микро таски.</h3>
-        <div>
+      <div class="exam--card">
+        <h3>8. Что такое event loop? Макро и микро таски.</h3>
+        <div class="subtopic">
           <h4>Что такое event loop</h4>
-          <p>JavaScript однопоточен: в один момент времени выполняется только один фрагмент кода, а асинхронность реализуется через очереди задач и event loop.</p>
+          <p>
+            JavaScript однопоточен: в один момент времени выполняется только
+            один фрагмент кода, а асинхронность реализуется через очереди задач
+            и event loop.
+          </p>
           <p>Event loop — это механизм, который:</p>
           <ol>
-            <li>Выполняет весь синхронный код (то, что попало в call stack).</li>
-            <li>Когда стек пуст, берёт задачи из очередей (микро‑ и макротаски) и выполняет их по определённым правилам.</li>
+            <li>
+              Выполняет весь синхронный код (то, что попало в call stack).
+            </li>
+            <li>
+              Когда стек пуст, берёт задачи из очередей (микро‑ и макротаски) и
+              выполняет их по определённым правилам.
+            </li>
           </ol>
-          <p>По сути, это цикл: «выполнил стек → обработал микротаски → взял следующую макротаску → снова обработал микротаски и т.д.».</p>
+          <p>
+            По сути, это цикл: «выполнил стек → обработал микротаски → взял
+            следующую макротаску → снова обработал микротаски и т.д.».
+          </p>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Макротаски (macrotasks)</h4>
-          <p>Макротаски (task queue) — это крупные асинхронные задачи, которые попадают в очередь «обычных» задач.</p>
+          <p>
+            Макротаски (task queue) — это крупные асинхронные задачи, которые
+            попадают в очередь «обычных» задач.
+          </p>
           <p>Примеры макротасок:</p>
           <ul>
             <li>setTimeout, setInterval</li>
@@ -4313,34 +4323,47 @@
           <ol>
             <li>Выполняется весь синхронный код.</li>
             <li>Потом берётся одна макротаска из очереди и выполняется.</li>
-            <li>После этого снова дают шанс микротаскам, и только потом переходят к следующей макротаске.</li>
+            <li>
+              После этого снова дают шанс микротаскам, и только потом переходят
+              к следующей макротаске.
+            </li>
           </ol>
         </div>
-        <div>
+        <div class="subtopic">
           <h4>Микротаски (microtasks)</h4>
-          <p>Микротаски — задачи более высокого приоритета, которые выполняются до перехода к следующей макротаске.</p>
+          <p>
+            Микротаски — задачи более высокого приоритета, которые выполняются
+            до перехода к следующей макротаске.
+          </p>
           <p>Примеры микротасок:</p>
           <ul>
             <li>обработчики Promise.then, catch, finally</li>
             <li>queueMicrotask(...)</li>
             <li>(в браузере также mutation observer и др.)</li>
           </ul>
-          <p>Правило: после выполнения синхронного кода и каждой макротаски движок полностью вычищает очередь микротасок, прежде чем брать следующую макротаску.</p>
+          <p>
+            Правило: после выполнения синхронного кода и каждой макротаски
+            движок полностью вычищает очередь микротасок, прежде чем брать
+            следующую макротаску.
+          </p>
         </div>
 
-        <div>
+        <div class="subtopic">
           <h4>Почему Promise выполняется раньше setTimeout 0</h4>
           <p>Классический пример:</p>
           <p class="code--block" data-lang="JS">
-            console.log("start"); <br> <br>
+            console.log("start"); <br />
+            <br />
 
-            setTimeout(() => { <br>
-              console.log("timeout"); <br>
-            }, 0); <br> <br>
+            setTimeout(() => { <br />
+            console.log("timeout"); <br />
+            }, 0); <br />
+            <br />
 
-            Promise.resolve().then(() => { <br>
-              console.log("promise"); <br>
-            }); <br> <br>
+            Promise.resolve().then(() => { <br />
+            console.log("promise"); <br />
+            }); <br />
+            <br />
 
             console.log("end");
           </p>
@@ -4356,100 +4379,2497 @@
             <li>start и end — синхронный код, выполняется сразу.</li>
             <li>setTimeout(..., 0) → колбэк в очередь макротасок.</li>
             <li>Promise.resolve().then(...) → колбэк в очередь микротасок.</li>
-            <li>После синхронного кода event loop сначала выполняет все микротаски → promise.</li>
+            <li>
+              После синхронного кода event loop сначала выполняет все микротаски
+              → promise.
+            </li>
             <li>Потом берёт первую макротаску → timeout.</li>
           </ol>
         </div>
-        <div>
-          <h4>Краткая формулировка для ответа</h4>
+        <div class="subtopic">
+          <h4>Кратко</h4>
           <ul>
-            <li>Event loop — это механизм в JS, который управляет выполнением кода: он берёт синхронный код, затем асинхронные задачи из очередей, чтобы однопоточный JS мог работать с асинхронностью.</li>
-            <li>Есть две важные очереди: макротаски и микротаски. Макротаски — это setTimeout, события DOM и другие крупные задачи; микротаски — в основном обработчики промисов и queueMicrotask.</li>
-            <li>После выполнения синхронного кода и каждой макротаски движок сначала полностью вычищает очередь микротасок, и только потом берёт следующую макротаску. Поэтому Promise.then выполняется раньше setTimeout(..., 0).</li>
+            <li>
+              Event loop — это механизм в JS, который управляет выполнением
+              кода: он берёт синхронный код, затем асинхронные задачи из
+              очередей, чтобы однопоточный JS мог работать с асинхронностью.
+            </li>
+            <li>
+              Есть две важные очереди: макротаски и микротаски. Макротаски — это
+              setTimeout, события DOM и другие крупные задачи; микротаски — в
+              основном обработчики промисов и queueMicrotask.
+            </li>
+            <li>
+              После выполнения синхронного кода и каждой макротаски движок
+              сначала полностью вычищает очередь микротасок, и только потом
+              берёт следующую макротаску. Поэтому Promise.then выполняется
+              раньше setTimeout(..., 0).
+            </li>
+          </ul>
+        </div>
+        <div class="subtopic">
+          <h5>Вот понятный порядок</h5>
+          <p>
+            Синхронный код ↓ <br />
+            | <br />
+            Микротаски (ВСЕ) ↓ <br />
+            | <br />
+            Макротаска 1 ↓ <br />
+            | <br />
+            Микротаски (ВСЕ) ↓ <br />
+            | <br />
+            Макротаска 2 ↓ <br />
+            | <br />
+            Микротаски (ВСЕ) ↓ <br />
+            и так далее...
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section vue">
+      <h3>Вопросы по VUE</h3>
+      <div class="exam--card">
+        <h3>
+          1. Чем отличается computed от обычной функции? Когда и зачем
+          использовать watch, если есть computed? Что такое ref и reactive.
+        </h3>
+
+        <div class="subtopic">
+          <h4>1. Чем отличается computed от обычной функции (methods)</h4>
+          <p>
+            <strong>computed</strong> — это «вычисляемое свойство», которое
+            ведёт себя как поле объекта: оно автоматически пересчитывается,
+            когда меняются его зависимые реактивные данные, и результат
+            кэшируется.
+          </p>
+          <p>
+            Обычный метод (функция в <code>methods</code>) запускается каждый
+            раз при вызове, не кэширует результат и не зависит от реактивных
+            данных автоматически — это просто функция.
+          </p>
+          <p>
+            Если одно и то же вычисление нужно часто использовать в шаблоне
+            (например, в нескольких местах или при каждом рендере), лучше
+            использовать <code>computed</code>, чтобы не считать одно и то же
+            много раз.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            const { createApp, computed } = Vue; <br />
+            <br />
+            const app = createApp(&#123; <br />
+            &nbsp;&nbsp;data() &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;return &#123; firstName: 'Иван', lastName:
+            'Иванов' &#125;; <br />
+            &nbsp;&nbsp;&#125;, <br />
+            &nbsp;&nbsp;computed: &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;fullName() &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return this.firstName + ' ' +
+            this.lastName; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&#125; <br />
+            &nbsp;&nbsp;&#125;, <br />
+            &nbsp;&nbsp;methods: &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;getFullName() &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return this.firstName + ' ' +
+            this.lastName; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&#125; <br />
+            &nbsp;&nbsp;&#125; <br />
+            &#125;); <br />
+          </p>
+
+          <p>
+            В этом примере <code>fullName</code> как <code>computed</code> будет
+            пересчитан только при изменении <code>firstName</code> или
+            <code>lastName</code>, а <code>getFullName()</code> будет
+            выполняться при каждом вызове.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>2. Когда и зачем использовать watch, если есть computed</h4>
+          <p>
+            <strong>computed</strong> используют, когда нужно получить новое
+            значение на основе других реактивных данных и использовать это
+            значение в шаблоне, как обычное свойство.
+          </p>
+          <p>
+            <strong>watch</strong> используют, когда при изменении данных нужно
+            выполнить побочный эффект: запрос на сервер, запись в localStorage,
+            запуск/очистка таймера, логирование и т.п. — то есть не просто
+            вернуть значение.
+          </p>
+          <p>
+            <code>watch</code> «подписывается» на изменение реактивного
+            источника (ref, reactive-свойство или computed) и вызывает
+            функцию‑обработчик с новым и старым значениями.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            const &#123; ref, watch &#125; = Vue; <br />
+            <br />
+            const search = ref(''); <br />
+            <br />
+            watch(search, (newValue, oldValue) =&gt; &#123; <br />
+            &nbsp;&nbsp;// Пример: отправить запрос на сервер с задержкой,
+            сохранить в localStorage и т.п. <br />
+            &nbsp;&nbsp;console.log('Поиск изменился:', oldValue, '-&gt;',
+            newValue); <br />
+            &#125;); <br />
+          </p>
+
+          <p>
+            Здесь <code>computed</code> не подойдёт, потому что нам нужно не
+            «получить значение», а «среагировать действием» на изменение
+            значения.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>3. Что такое ref и reactive в Vue 3</h4>
+          <p>
+            <strong>ref</strong> создаёт «обёртку» над значением:
+            <code>ref(значение)</code> возвращает объект с полем
+            <code>.value</code>, и это значение становится реактивным (Vue
+            отслеживает его изменения).
+          </p>
+          <p>
+            <strong>ref</strong> обычно используют для примитивов (число,
+            строка, boolean), но можно также оборачивать объекты и массивы,
+            тогда реактивной будет сама ссылка (для работы с DOM, ссылок на
+            компоненты и т.п.).
+          </p>
+          <p>
+            <strong>reactive</strong> делает объект «глубоко реактивным»:
+            оборачивает сам объект и его свойства в Proxy, так что изменения
+            любых вложенных полей отслеживаются. Он не работает напрямую с
+            примитивами — только с объектами.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            const &#123; ref, reactive &#125; = Vue; <br />
+            <br />
+            const count = ref(0); <br />
+            // Обращаемся так: count.value <br />
+            <br />
+            const state = reactive(&#123; <br />
+            &nbsp;&nbsp;name: 'Иван', <br />
+            &nbsp;&nbsp;age: 20 <br />
+            &#125;); <br />
+            // Обращаемся как к обычному объекту: state.name, state.age <br />
+          </p>
+
+          <p>
+            В шаблоне Vue автоматически «распаковывает» <code>ref</code>,
+            поэтому там можно писать
+            <code>&#123;&#123; count &#125;&#125;</code>, а не
+            <code>&#123;&#123; count.value &#125;&#125;</code>; в JS‑коде за
+            пределами шаблона нужно использовать <code>.value</code>.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>4. Кратко</h4>
+          <ul>
+            <li>
+              <strong>computed</strong> — вычисляемое свойство, завязано на
+              реактивные данные, кэширует результат и пересчитывается только при
+              изменении зависимостей; удобно для сложных вычислений,
+              используемых в шаблоне.
+            </li>
+            <li>
+              Обычная функция в <code>methods</code> — выполняется при каждом
+              вызове, без кэша, годится для обработчиков событий и одноразовых
+              вычислений.
+            </li>
+            <li>
+              <strong>watch</strong> нужен, когда при изменении данных надо
+              выполнить действие (запрос, таймер, запись в хранилище), а не
+              просто получить новое значение.
+            </li>
+            <li>
+              <strong>ref</strong> — реактивная обёртка над значением, чаще
+              всего примитивом; доступ через <code>.value</code> в JS, в шаблоне
+              можно писать как обычную переменную.
+            </li>
+            <li>
+              <strong>reactive</strong> — делает объект (и его вложенные
+              свойства) реактивным; используют для состояния с несколькими
+              полями, когда удобно работать с объектом.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exam--card">
+        <h3>
+          2. Что делает директива v-model и как она работает? Как v-model
+          работает на кастомных компонентах. Как передать данные от
+          родительского компонента к дочернему и обратно?
+        </h3>
+
+        <div class="subtopic">
+          <h4>1. Что делает директива v-model и как она работает</h4>
+          <p>
+            <strong>v-model</strong> создаёт двустороннюю привязку между полем
+            формы (input, textarea, select и т.п.) и реактивным состоянием
+            компонента. При вводе в поле значение автоматически попадает в
+            состояние, а при изменении состояния — обновляется значение поля.
+          </p>
+          <p>
+            Под капотом <code>v-model</code> — это просто синтаксический сахар
+            для связки <code>:value</code> (или соответствующего атрибута) и
+            события ввода (обычно <code>@input</code> или
+            <code>@update:modelValue</code> для компонента).
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- В шаблоне --&gt; <br />
+            &lt;input type=&quot;text&quot; v-model=&quot;username&quot; /&gt;
+            <br />
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            // Внутри компонента <br />
+            import &#123; ref &#125; from 'vue'; <br />
+            <br />
+            const username = ref(''); <br />
+            // v-model=&quot;username&quot; &lt;=&gt;
+            :value=&quot;username&quot; + @input=&quot;username =
+            $event.target.value&quot; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>2. Как v-model работает на кастомных компонентах</h4>
+          <p>
+            Когда мы пишем <code>&lt;MyInput v-model="value" /&gt;</code> на
+            кастомном компоненте, Vue разворачивает это в передачу пропа
+            <code>modelValue</code> и прослушку события
+            <code>update:modelValue</code>.
+          </p>
+          <p>
+            Правило: дочерний компонент должен принять проп
+            <code>modelValue</code> и выбрасывать событие
+            <code>update:modelValue</code> с новым значением, тогда родительское
+            <code>v-model</code> будет работать автоматически.
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Родительский компонент --&gt; <br />
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;CustomInput v-model=&quot;message&quot; /&gt; <br />
+            &nbsp;&nbsp;&lt;p&gt;Сообщение: &#123;&#123; message
+            &#125;&#125;&lt;/p&gt; <br />
+            &lt;/template&gt; <br />
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            // Родитель <br />
+            import &#123; ref &#125; from 'vue'; <br />
+            import CustomInput from './CustomInput.vue'; <br />
+            <br />
+            const message = ref('Привет'); <br />
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Дочерний компонент CustomInput.vue --&gt; <br />
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;input <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;:value=&quot;modelValue&quot; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;@input=&quot;$emit('update:modelValue',
+            $event.target.value)&quot; <br />
+            &nbsp;&nbsp;/&gt; <br />
+            &lt;/template&gt; <br />
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            &lt;script setup&gt; <br />
+            const props = defineProps(&#123; <br />
+            &nbsp;&nbsp;modelValue: &#123; type: String, default: '' &#125;
+            <br />
+            &#125;); <br />
+            <br />
+            const emit = defineEmits(['update:modelValue']); <br />
+            &lt;/script&gt; <br />
+          </p>
+
+          <p>
+            С точки зрения синтаксиса родителя, конструкция
+            <code>&lt;CustomInput v-model="message" /&gt;</code> эквивалентна
+            <code
+              >&lt;CustomInput :modelValue="message" @update:modelValue="message
+              = $event" /&gt;</code
+            >.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>3. Передача данных от родителя к дочернему и обратно</h4>
+          <p>
+            От родителя к дочернему данные передаются через
+            <strong>props</strong>: родитель передаёт значения в атрибутах тега,
+            а дочерний объявляет соответствующие пропы и читает их как обычные
+            переменные.
+          </p>
+          <p>
+            Обратно (от дочернего к родителю) данные передаются через
+            <strong>события</strong>: дочерний компонент вызывает
+            <code>$emit('имя-события', данные)</code>, а родитель подписывается
+            на событие через <code>@имя-события="обработчик"</code>.
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Родитель --&gt; <br />
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;ChildComponent <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;:title=&quot;parentTitle&quot; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;@change-title=&quot;handleChangeTitle&quot;
+            <br />
+            &nbsp;&nbsp;/&gt; <br />
+            &lt;/template&gt; <br />
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            // Родительский скрипт <br />
+            import &#123; ref &#125; from 'vue'; <br />
+            <br />
+            const parentTitle = ref('Начальный заголовок'); <br />
+            <br />
+            function handleChangeTitle(newTitle) &#123; <br />
+            &nbsp;&nbsp;parentTitle.value = newTitle; <br />
+            &#125; <br />
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Дочерний компонент ChildComponent.vue --&gt; <br />
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;div&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;&#123;&#123; title
+            &#125;&#125;&lt;/h4&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;button
+            @click=&quot;onClick&quot;&gt;Изменить заголовок&lt;/button&gt;
+            <br />
+            &nbsp;&nbsp;&lt;/div&gt; <br />
+            &lt;/template&gt; <br />
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            &lt;script setup&gt; <br />
+            const props = defineProps(&#123; <br />
+            &nbsp;&nbsp;title: &#123; type: String, required: true &#125; <br />
+            &#125;); <br />
+            <br />
+            const emit = defineEmits(['change-title']); <br />
+            <br />
+            function onClick() &#123; <br />
+            &nbsp;&nbsp;emit('change-title', 'Новый заголовок из дочернего');
+            <br />
+            &#125; <br />
+            &lt;/script&gt; <br />
+          </p>
+
+          <p>
+            В реальных проектах для простых форм часто используют
+            <code>v-model</code> поверх этой схемы: проп
+            <code>modelValue</code> + событие <code>update:modelValue</code>,
+            что фактически является комбинацией props + emit.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>4. Кратко</h4>
+          <ul>
+            <li>
+              <strong>v-model</strong> — двусторонняя привязка: состояние
+              &lt;=&gt; элемент формы или компонент; внутри это связка
+              <code>:value</code> и события обновления.
+            </li>
+            <li>
+              На кастомном компоненте <code>v-model</code> разворачивается в
+              <code>:modelValue</code> + <code>@update:modelValue</code>,
+              дочерний обязан принять <code>modelValue</code> и эмитить
+              <code>update:modelValue</code>.
+            </li>
+            <li>
+              От родителя к дочернему данные идут через
+              <strong>props</strong> (атрибуты тега =&gt; объявленные пропы в
+              дочернем).
+            </li>
+            <li>
+              От дочернего к родителю данные идут через
+              <strong>события</strong> (<code>$emit('имя', данные)</code> в
+              дочернем и <code>@имя=&quot;обработчик&quot;</code> в
+              родительском).
+            </li>
+            <li>
+              <code>v-model</code> на компонентах — это удобный сахар над
+              связкой props + emit (модель: <code>modelValue</code> /
+              <code>update:modelValue</code>).
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exam--card">
+        <h3>
+          3. Что такое props drilling и почему он считается архитектурной
+          проблемой? Какими способами можно решить эту проблему.
+        </h3>
+
+        <div class="subtopic">
+          <h4>1. Что такое props drilling</h4>
+          <p>
+            <strong>Props drilling</strong> — это ситуация, когда одни и те же
+            данные приходится передавать через несколько уровней вложенных
+            компонентов от верхнего родителя к глубоко вложенному потомку,
+            причём промежуточные компоненты сами эти данные не используют, а
+            только «прокидывают дальше».
+          </p>
+          <p>
+            Например, если данные нужны компоненту «внуку», но живут в самом
+            верхнем компоненте, их приходится передавать через родителя и
+            ребёнка только ради того, чтобы добросить их до нужного места.
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Верхний компонент --&gt; <br />
+            &lt;Parent :user=&quot;user&quot; /&gt; <br />
+            <br />
+            &lt;!-- Parent.vue --&gt; <br />
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;Child :user=&quot;user&quot; /&gt; &lt;!-- сам
+            Parent user не использует --&gt; <br />
+            &lt;/template&gt; <br />
+            <br />
+            &lt;!-- Child.vue --&gt; <br />
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;GrandChild :user=&quot;user&quot; /&gt; <br />
+            &lt;/template&gt; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>2. Почему props drilling считается архитектурной проблемой</h4>
+          <ul>
+            <li>
+              Усложняется код: много «промежуточных» props, которые компоненты
+              не используют по сути, а только перенаправляют дальше.
+            </li>
+            <li>
+              Падает читаемость: сложнее понять, откуда пришли данные и где они
+              реально нужны; затрудняется отладка и навигация по коду.
+            </li>
+            <li>
+              Слабая масштабируемость: при изменении структуры компонентов или
+              данных приходится править сразу много уровней.
+            </li>
+            <li>
+              Сильная связность: компоненты зависят от контекста выше по дереву,
+              их сложнее переиспользовать в другом месте.
+            </li>
+            <li>
+              Лишние перерисовки: изменение одного props может вызывать
+              обновление всех промежуточных компонентов, хотя им данные не
+              нужны.
+            </li>
+          </ul>
+        </div>
+
+        <div class="subtopic">
+          <h4>3. Способы решения проблемы props drilling в Vue</h4>
+          <p>
+            В Vue есть несколько подходов, которые позволяют не «таскать» props
+            через все уровни дерева, а давать доступ к данным там, где они
+            реально нужны.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>3.1. provide / inject</h4>
+          <p>
+            Механизм <strong>provide/inject</strong> позволяет верхнему
+            компоненту «предоставить» значение всем своим потомкам, а глубоко
+            вложенные компоненты могут его «подключить» через
+            <code>inject</code> без явной передачи через каждый уровень.
+          </p>
+          <p>
+            Это удобно для глобальных настроек, текущего пользователя, тем,
+            локализации, форм, когда одно и то же состояние нужно многим
+            вложенным компонентам.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            &lt;!-- App.vue --&gt; <br />
+            &lt;script setup&gt; <br />
+            import &#123; provide, ref &#125; from 'vue'; <br />
+            <br />
+            const currentUser = ref(&#123; name: 'Иван', role: 'admin' &#125;);
+            <br />
+            <br />
+            provide('currentUser', currentUser); <br />
+            &lt;/script&gt; <br />
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            &lt;!-- Глубоко вложенный компонент --&gt; <br />
+            &lt;script setup&gt; <br />
+            import &#123; inject &#125; from 'vue'; <br />
+            <br />
+            const currentUser = inject('currentUser'); <br />
+            // currentUser.value.name и т.д. доступны без props на каждом уровне
+            <br />
+            &lt;/script&gt; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>3.2. Глобальное состояние: Pinia / Vuex / собственный стор</h4>
+          <p>
+            Для данных, которые нужны многим частям приложения (авторизация,
+            корзина, настройки), используют отдельное хранилище состояния: в
+            актуальных проектах чаще всего это Pinia (вместо Vuex).
+          </p>
+          <p>
+            Компонент читает и изменяет данные прямо из стора, а не через
+            бесконечные props, что убирает необходимость прокидывать состояние
+            через все уровни.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            // Пример Pinia-хранилища userStore <br />
+            import &#123; defineStore &#125; from 'pinia'; <br />
+            <br />
+            export const useUserStore = defineStore('user', &#123; <br />
+            &nbsp;&nbsp;state: () =&gt; (&#123; name: 'Иван', role: 'admin'
+            &#125;), <br />
+            &nbsp;&nbsp;actions: &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;setName(name) &#123; this.name = name;
+            &#125; <br />
+            &nbsp;&nbsp;&#125; <br />
+            &#125;); <br />
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            // В любом компоненте <br />
+            import &#123; useUserStore &#125; from '@/stores/userStore'; <br />
+            <br />
+            const userStore = useUserStore(); <br />
+            console.log(userStore.name); <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>3.3. Composables (composition functions)</h4>
+          <p>
+            В Vue 3 можно вынести общую логику в отдельные функции
+            (composables), например <code>useUser()</code> или
+            <code>useTheme()</code>, которые возвращают реактивные переменные и
+            методы.
+          </p>
+          <p>
+            Любой компонент может подключить этот composable напрямую, без
+            передачи данных через props, получив доступ к разделяемому состоянию
+            или логике.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            // useUser.js <br />
+            import &#123; ref &#125; from 'vue'; <br />
+            <br />
+            const user = ref(&#123; name: 'Иван' &#125;); <br />
+            <br />
+            export function useUser() &#123; <br />
+            &nbsp;&nbsp;function setName(name) &#123; user.value.name = name;
+            &#125; <br />
+            &nbsp;&nbsp;return &#123; user, setName &#125;; <br />
+            &#125; <br />
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            // В двух разных компонентах <br />
+            import &#123; useUser &#125; from '@/composables/useUser'; <br />
+            <br />
+            const &#123; user, setName &#125; = useUser(); <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>3.4. Локальное поднятие состояния (lift state up)</h4>
+          <p>
+            Иногда достаточно немного изменить структуру: перенести состояние
+            ближе к тем компонентам, которые его реально используют, чтобы
+            сократить количество уровней, через которые проходят props.
+          </p>
+          <p>
+            Это не избавляет полностью от props, но уменьшает глубину их
+            «прокидывания» и делает дерево компонентов логичнее.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>4. Кратко</h4>
+          <ul>
+            <li>
+              Props drilling — это передача одних и тех же данных через много
+              уровней компонентов, которые их сами не используют.
+            </li>
+            <li>
+              Это проблема, потому что код засоряется лишними props, падает
+              читаемость, возрастает связность и сложнее масштабировать
+              архитектуру.
+            </li>
+            <li>
+              Основные решения: <strong>provide/inject</strong> для передачи
+              данных от предка ко всем потомкам без промежуточных props.
+            </li>
+            <li>
+              Глобальное состояние (Pinia/Vuex/собственный стор) — данные живут
+              отдельно от дерева компонентов, компоненты их читают напрямую.
+            </li>
+            <li>
+              Composables (composition functions) и продуманное размещение
+              состояния помогают сократить или полностью убрать props drilling.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exam--card">
+        <h3>
+          4. Чем принципиально отличается механизм provide / inject от
+          использования глобального состояния через Pinia?
+        </h3>
+
+        <div class="subtopic">
+          <h4>1. Суть provide / inject</h4>
+          <p>
+            Механизм <strong>provide / inject</strong> — это встроенная в Vue
+            система внедрения зависимостей: предок «предоставляет» значение, а
+            любой его потомок может это значение «подключить», минуя
+            промежуточные уровни компонентов.
+          </p>
+          <p>
+            Область видимости provide / inject ограничена конкретным деревом
+            компонентов: данные доступны только потомкам того компонента,
+            который выполняет provide.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            &lt;!-- Родитель --&gt; <br />
+            &lt;script setup&gt; <br />
+            import &#123; provide, ref &#125; from 'vue'; <br />
+            <br />
+            const theme = ref('dark'); <br />
+            provide('theme', theme); <br />
+            &lt;/script&gt; <br />
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            &lt;!-- Глубокий потомок --&gt; <br />
+            &lt;script setup&gt; <br />
+            import &#123; inject &#125; from 'vue'; <br />
+            <br />
+            const theme = inject('theme'); <br />
+            // theme.value доступна без props через все уровни дерева <br />
+            &lt;/script&gt; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>2. Суть глобального состояния через Pinia</h4>
+          <p>
+            <strong>Pinia</strong> — это официальная библиотека для глобального
+            состояния в Vue 3: данные хранятся в отдельных «стоях» (stores),
+            которые можно импортировать и использовать в любых компонентах и
+            даже вне компонентов.
+          </p>
+          <p>
+            Состояние в Pinia обычно живёт на уровне всего приложения: к одному
+            и тому же store обращаются разные, даже не связанные друг с другом
+            ветки дерева компонентов и разные страницы.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            // userStore.js <br />
+            import &#123; defineStore &#125; from 'pinia'; <br />
+            <br />
+            export const useUserStore = defineStore('user', &#123; <br />
+            &nbsp;&nbsp;state: () =&gt; (&#123; name: 'Иван', role: 'admin'
+            &#125;), <br />
+            &nbsp;&nbsp;actions: &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;setName(name) &#123; this.name = name;
+            &#125; <br />
+            &nbsp;&nbsp;&#125; <br />
+            &#125;); <br />
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            // В любом компоненте <br />
+            import &#123; useUserStore &#125; from '@/stores/userStore'; <br />
+            <br />
+            const userStore = useUserStore(); <br />
+            console.log(userStore.name); <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>3. Принципиальные отличия provide / inject и Pinia</h4>
+          <ul>
+            <li>
+              <strong>Область действия</strong>: provide / inject работает в
+              рамках конкретного поддерева компонентов, Pinia — на уровне всего
+              приложения (глобально).
+            </li>
+            <li>
+              <strong>Назначение</strong>: provide / inject решает проблему
+              props drilling (глубоко вложенные компоненты в одном контексте),
+              Pinia решает задачу общеприложенческого состояния (авторизация,
+              корзина, настройки, кэш данных).
+            </li>
+            <li>
+              <strong>Архитектура</strong>: provide / inject — низкоуровневый
+              DI-механизм Vue без дополнительных соглашений; Pinia даёт
+              структуру (state, getters, actions), devtools-интеграцию и явные
+              паттерны работы со сторами.
+            </li>
+            <li>
+              <strong>Доступ</strong>: provide / inject требует наличия
+              родителя, который делает provide; Pinia store можно импортировать
+              где угодно, в том числе вне компонента (например, в сервисах).
+            </li>
+            <li>
+              <strong>Масштаб</strong>: provide / inject удобно для локальных
+              контекстов (одна форма, один модуль, одна страница), Pinia — для
+              данных, нужных многим независимым частям приложения.
+            </li>
+          </ul>
+        </div>
+
+        <div class="subtopic">
+          <h4>4. Когда использовать provide / inject, а когда Pinia</h4>
+          <p>
+            provide / inject подходит, когда состояние «логически принадлежит»
+            одному компоненту и его потомкам: например, контекст формы, тема
+            внутри layout-а, локальный менеджер модалок, который нужен только в
+            этой части дерева.
+          </p>
+          <p>
+            Pinia лучше, когда состояние действительно глобальное: авторизация
+            пользователя, настройки приложения, корзина интернет‑магазина, общие
+            фильтры, которые должны жить между страницами и сохраняться при
+            навигации.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            // Пример: локальный контекст формы через provide/inject <br />
+            // FormRoot.vue <br />
+            import &#123; provide, reactive &#125; from 'vue'; <br />
+            <br />
+            const formState = reactive(&#123; name: '', email: '' &#125;);
+            <br />
+            provide('formState', formState); <br />
+            <br />
+            // Любой дочерний компонент формы: <br />
+            // const formState = inject('formState'); <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>5. Кратко</h4>
+          <ul>
+            <li>
+              provide / inject — встроенный механизм Vue для передачи данных от
+              предка к потомкам без prop drilling; область действия — одно
+              дерево компонентов.
+            </li>
+            <li>
+              Pinia — библиотека глобального состояния: отдельные stores,
+              devtools, удобные паттерны; область действия — всё приложение.
+            </li>
+            <li>
+              provide / inject удобно для локальных контекстов (форма, тема,
+              модалка), когда состояние нужно только в конкретной ветке дерева.
+            </li>
+            <li>
+              Pinia используют, когда одно и то же состояние нужно на разных
+              страницах и в несвязанных компонентах, и его важно централизованно
+              хранить и отлаживать.
+            </li>
+            <li>
+              Главная разница: provide / inject — scoped-контекст внутри
+              поддерева, Pinia — централизованный глобальный стор приложения.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exam--card">
+        <h3>
+          5. В чём принципиальная разница между состоянием приложения (App State
+          - Pinia) и кэшем данных (Cache - TanStack Query)?
+        </h3>
+
+        <div class="subtopic">
+          <h4>1. Что такое состояние приложения (App State, Pinia)</h4>
+          <p>
+            <strong>Состояние приложения</strong> — это данные, которые живут
+            исключительно на клиенте и описывают текущую работу интерфейса:
+            выбранная вкладка, открыта ли модалка, содержимое формы до отправки,
+            выбранные фильтры, текущий пользователь и его права, локальные флаги
+            вроде «показывать спиннер» или «показать тост».
+          </p>
+          <p>
+            Pinia хранит именно такое клиентское состояние: оно не обязано
+            один-в-один совпадать с данными на сервере, может существовать
+            только в рамках текущей сессии и может быть произвольной структуры
+            (включая чисто UI-флаги).
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>2. Что такое кэш данных (Cache, TanStack Query)</h4>
+          <p>
+            <strong>Кэш TanStack Query</strong> хранит не «свободное» состояние,
+            а результат запросов к серверу — то есть серверное состояние,
+            которое пришло по HTTP/WS и может меняться независимо от клиента
+            (другими пользователями, другими сервисами).
+          </p>
+          <p>
+            TanStack Query управляет именно серверным состоянием: когда и как
+            его получать, сколько держать в кэше, когда считать устаревшим,
+            когда автоматически обновлять в фоне, как обрабатывать ошибки и
+            повторные запросы.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>
+            3. Принципиальные отличия App State (Pinia) и Cache (TanStack Query)
+          </h4>
+          <ul>
+            <li>
+              <strong>Источник данных</strong>: App State — данные рождаются на
+              клиенте и живут в приложении; Cache — это копия данных, «источник
+              истины» для которых находится на сервере.
+            </li>
+            <li>
+              <strong>Владение данными</strong>: App State «принадлежит» фронту
+              (мы можем полностью менять его локально); Cache должен оставаться
+              синхронизированным с сервером, и обновление делается через
+              запросы/мутации.
+            </li>
+            <li>
+              <strong>Семантика</strong>: App State описывает текущий UI и
+              поведение (выборы пользователя, состояние форм), Cache описывает
+              загруженные ресурсы: списки, сущности, детали, которые сервер
+              отдаёт по API.
+            </li>
+            <li>
+              <strong>Жизненный цикл</strong>: App State живёт столько, сколько
+              нужно логике приложения (иногда через несколько страниц, иногда
+              только пока открыт компонент); Cache управляется правилами
+              свежести/устаревания (stale/fresh, refetch при фокусе, gc времени
+              и т.п.).
+            </li>
+            <li>
+              <strong>Инструменты</strong>: Pinia даёт структуру для
+              произвольного состояния (state/getters/actions), TanStack Query
+              даёт high‑level API для запросов/мутаций, кэша, инвалидации и
+              фоновых обновлений.
+            </li>
+          </ul>
+        </div>
+
+        <div class="subtopic">
+          <h4>4. Как работать с ними вместе</h4>
+          <p>
+            Pinia обычно используют для того, что не является прямым «ответом
+            сервера»: состояние UI, выбранные элементы, промежуточные значения,
+            флаги «отфильтровано ли», локальные настройки пользователя, которые
+            не обязательно хранить на сервере.
+          </p>
+          <p>
+            TanStack Query используют для загрузки и кэширования серверных
+            данных: списки товаров, пользователей, задач, комментариев, а также
+            для синхронизации изменений (mutations) и автоматического обновления
+            этих данных в интерфейсе.
+          </p>
+          <p>
+            Частый паттерн: TanStack Query отвечает за получение и кеширование
+            «сырых» данных с сервера, а Pinia — за выбранные фильтры, текущую
+            страницу, выбранный элемент, временное состояние форм и прочую
+            клиентскую логику поверх этих данных.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>5. Кратко</h4>
+          <ul>
+            <li>
+              App State (Pinia) — клиентское состояние интерфейса: вкладки,
+              модалки, фильтры, текущий пользователь и прочая логика, которая
+              живёт только во фронтенде.
+            </li>
+            <li>
+              Cache (TanStack Query) — кэш серверных данных: результаты
+              запросов, которые библиотека обновляет, помечает устаревшими,
+              перезапрашивает и синхронизирует с бэкендом.
+            </li>
+            <li>
+              Pinia отвечает за «что сейчас происходит в приложении», TanStack
+              Query — за «какие данные с сервера у нас есть и насколько они
+              свежие».
+            </li>
+            <li>
+              Они не конкуренты: TanStack Query не заменяет Pinia, а закрывает
+              именно задачу управления серверным состоянием и его кэшированием.
+            </li>
+            <li>
+              Типичный подход: TanStack Query — источник данных с сервера, Pinia
+              — центр управления UI и пользовательскими настройками вокруг этих
+              данных.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exam--card">
+        <h3>6. Какие основные хуки жизненного цикла существуют в Vue?</h3>
+
+        <div class="subtopic">
+          <h4>1. Общая идея жизненного цикла</h4>
+          <p>
+            Компонент Vue проходит несколько стадий жизни: создание,
+            монтирование в DOM, обновление при изменении данных и уничтожение.
+            На каждой из этих стадий можно выполнить свой код через специальные
+            функции — хуки жизненного цикла.
+          </p>
+          <p>
+            В Options API хуки объявляются как методы объекта компонента
+            (например, <code>mounted()</code>), а в Composition API — как
+            функции <code>onMounted</code>, <code>onUpdated</code> и т.п.,
+            вызываемые внутри <code>&lt;script setup&gt;</code>.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>2. Основные хуки жизненного цикла (Options API)</h4>
+          <p>
+            В классической форме (Options API) обычно выделяют восемь основных
+            хуков компонента:
+          </p>
+          <ul>
+            <li>
+              <strong>beforeCreate</strong> — вызывается до создания экземпляра
+              (данные и реактивность ещё не настроены).
+            </li>
+            <li>
+              <strong>created</strong> — экземпляр создан, реактивность
+              настроена, но компонент ещё не смонтирован в DOM.
+            </li>
+            <li>
+              <strong>beforeMount</strong> — вызывается перед первым
+              монтированием компонента в DOM.
+            </li>
+            <li>
+              <strong>mounted</strong> — компонент смонтирован, DOM-элементы
+              доступны (часто используют для работы с DOM или сторонними
+              библиотеками).
+            </li>
+            <li>
+              <strong>beforeUpdate</strong> — вызывается перед повторным
+              рендером при изменении реактивных данных.
+            </li>
+            <li>
+              <strong>updated</strong> — вызывается после обновления DOM, когда
+              изменения уже применены.
+            </li>
+            <li>
+              <strong>beforeUnmount</strong> (раньше <code>beforeDestroy</code>)
+              — вызывается перед удалением компонента.
+            </li>
+            <li>
+              <strong>unmounted</strong> (раньше <code>destroyed</code>) —
+              компонент уничтожен, можно очищать подписки, таймеры и т.п.
+            </li>
+          </ul>
+
+          <p class="code--block" data-lang="JS">
+            export default &#123; <br />
+            &nbsp;&nbsp;created() &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log('created'); <br />
+            &nbsp;&nbsp;&#125;, <br />
+            &nbsp;&nbsp;mounted() &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log('mounted'); <br />
+            &nbsp;&nbsp;&#125;, <br />
+            &nbsp;&nbsp;updated() &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log('updated'); <br />
+            &nbsp;&nbsp;&#125;, <br />
+            &nbsp;&nbsp;unmounted() &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log('unmounted'); <br />
+            &nbsp;&nbsp;&#125; <br />
+            &#125;; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>3. Основные хуки жизненного цикла (Composition API)</h4>
+          <p>
+            В Composition API используются функции, которые импортируются из Vue
+            и вызываются внутри <code>setup</code> или внутри
+            <code>&lt;script setup&gt;</code>. Они соответствуют тем же стадиям
+            жизненного цикла.
+          </p>
+          <ul>
+            <li><strong>onMounted</strong> — аналог <code>mounted</code>.</li>
+            <li>
+              <strong>onBeforeMount</strong> — аналог <code>beforeMount</code>.
+            </li>
+            <li><strong>onUpdated</strong> — аналог <code>updated</code>.</li>
+            <li>
+              <strong>onBeforeUpdate</strong> — аналог
+              <code>beforeUpdate</code>.
+            </li>
+            <li>
+              <strong>onUnmounted</strong> — аналог <code>unmounted</code>.
+            </li>
+            <li>
+              <strong>onBeforeUnmount</strong> — аналог
+              <code>beforeUnmount</code>.
+            </li>
+            <li>
+              <strong>onErrorCaptured</strong> — перехват ошибок у дочерних
+              компонентов.
+            </li>
+            <li>
+              <strong>onActivated</strong> / <strong>onDeactivated</strong> —
+              для компонентов, обёрнутых в <code>&lt;KeepAlive&gt;</code>.
+            </li>
+          </ul>
+
+          <p class="code--block" data-lang="JS">
+            &lt;script setup&gt; <br />
+            import &#123; onMounted, onUpdated, onUnmounted &#125; from 'vue';
+            <br />
+            <br />
+            onMounted(() =&gt; &#123; <br />
+            &nbsp;&nbsp;console.log('компонент смонтирован'); <br />
+            &#125;); <br />
+            <br />
+            onUpdated(() =&gt; &#123; <br />
+            &nbsp;&nbsp;console.log('компонент обновлён'); <br />
+            &#125;); <br />
+            <br />
+            onUnmounted(() =&gt; &#123; <br />
+            &nbsp;&nbsp;console.log('компонент уничтожен'); <br />
+            &#125;); <br />
+            &lt;/script&gt; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>4. Для чего обычно используют основные хуки</h4>
+          <ul>
+            <li>
+              <strong>created / setup</strong> — инициализация данных, запросы,
+              которые не завязаны на DOM.
+            </li>
+            <li>
+              <strong>mounted / onMounted</strong> — работа с DOM, сторонними
+              библиотеками, которые требуют готового HTML.
+            </li>
+            <li>
+              <strong>beforeUpdate / onBeforeUpdate</strong> — редкий случай,
+              когда нужно что-то сделать до обновления DOM.
+            </li>
+            <li>
+              <strong>updated / onUpdated</strong> — реакция на уже обновлённый
+              DOM (например, пересчёт размеров элементов).
+            </li>
+            <li>
+              <strong>beforeUnmount / onBeforeUnmount</strong> и
+              <strong>unmounted / onUnmounted</strong> — очистка ресурсов:
+              таймеров, подписок, слушателей событий.
+            </li>
+          </ul>
+        </div>
+
+        <div class="subtopic">
+          <h4>5. Кратко</h4>
+          <ul>
+            <li>
+              Жизненный цикл Vue-компонента делится на этапы: создание,
+              монтирование, обновление и уничтожение.
+            </li>
+            <li>
+              В Options API используются хуки: <strong>beforeCreate</strong>,
+              <strong>created</strong>, <strong>beforeMount</strong>,
+              <strong>mounted</strong>, <strong>beforeUpdate</strong>,
+              <strong>updated</strong>, <strong>beforeUnmount</strong>,
+              <strong>unmounted</strong>.
+            </li>
+            <li>
+              В Composition API используются функции:
+              <strong>onBeforeMount</strong>, <strong>onMounted</strong>,
+              <strong>onBeforeUpdate</strong>, <strong>onUpdated</strong>,
+              <strong>onBeforeUnmount</strong>, <strong>onUnmounted</strong> и
+              специальные хуки <strong>onErrorCaptured</strong>,
+              <strong>onActivated</strong>, <strong>onDeactivated</strong>.
+            </li>
+            <li>
+              Хуки нужны, чтобы выполнять код в нужный момент жизни компонента:
+              при первом рендере, при изменении данных, перед удалением и т.д.
+            </li>
+            <li>
+              На практике чаще всего используют <strong>created/setup</strong>,
+              <strong>mounted/onMounted</strong>,
+              <strong>updated/onUpdated</strong> и
+              <strong>unmounted/onUnmounted</strong>.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exam--card">
+        <h3>
+          7. Что понимается под контролируемыми и неконтролируемыми
+          компонентами? Объяснить разницу между умными и глупыми компонентами.
+        </h3>
+
+        <div class="subtopic">
+          <h4>1. Контролируемые компоненты</h4>
+          <p>
+            <strong>Контролируемый компонент</strong> — это компонент, у
+            которого всё важное состояние (например, значения полей формы)
+            хранится во внешнем состоянии (reactive/ref, Pinia, родительский
+            компонент), а сам компонент только отображает это состояние и
+            сообщает об изменениях через события.
+          </p>
+          <p>
+            Источником истины является JS‑состояние, а не сам DOM: пользователь
+            что‑то вводит, компонент эмитит событие, родитель меняет состояние,
+            и новое значение снова приходит в компонент через пропы или v-model.
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Родитель --&gt; <br />
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;input v-model=&quot;name&quot; /&gt; &lt;!--
+            значение живёт в реактивном состоянии --&gt; <br />
+            &nbsp;&nbsp;&lt;p&gt;Имя: &#123;&#123; name &#125;&#125;&lt;/p&gt;
+            <br />
+            &lt;/template&gt; <br />
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            import &#123; ref &#125; from 'vue'; <br />
+            <br />
+            const name = ref('Иван'); <br />
+            // input здесь контролируемый: его значение всегда равно name, а
+            изменения идут через v-model <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>2. Неконтролируемые компоненты</h4>
+          <p>
+            <strong>Неконтролируемый компонент</strong> — это компонент, у
+            которого часть состояния живёт внутри самого DOM‑элемента (input,
+            textarea и т.п.) или внутри компонента, а не в общем реактивном
+            состоянии приложения.
+          </p>
+          <p>
+            В таком случае значение поля не синхронизируется на каждый ввод с
+            реактивным состоянием, а читается по запросу (через ref на элемент
+            или через методы компонента), например только при отправке формы.
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;input type=&quot;text&quot; ref=&quot;inputEl&quot;
+            /&gt; <br />
+            &nbsp;&nbsp;&lt;button
+            @click=&quot;submit&quot;&gt;Отправить&lt;/button&gt; <br />
+            &lt;/template&gt; <br />
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            import &#123; ref &#125; from 'vue'; <br />
+            <br />
+            const inputEl = ref(null); <br />
+            <br />
+            function submit() &#123; <br />
+            &nbsp;&nbsp;const value = inputEl.value.value; // читаем значение
+            прямо из DOM только при клике <br />
+            &nbsp;&nbsp;console.log('Отправили:', value); <br />
+            &#125; <br />
+            // Здесь input можно считать неконтролируемым: пока мы не нажали
+            кнопку, значение не живёт в реактивном состоянии <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>3. Умные (smart) компоненты</h4>
+          <p>
+            <strong>Умные компоненты</strong> (smart, container) — это
+            компоненты, которые содержат бизнес‑логику и логику работы
+            приложения: получают данные (в том числе с сервера), работают со
+            store (Pinia), принимают решения, какие данные и какие события
+            передать дочерним компонентам.
+          </p>
+          <p>
+            Они обычно находятся выше по дереву, «орchestrируют» работу
+            нескольких презентационных компонентов, знают о структурах данных и
+            о том, как всё связано в приложении.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            &lt;!-- SmartComponent.vue --&gt; <br />
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;UserCard <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;:user=&quot;user&quot; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;@update-name=&quot;onUpdateName&quot; <br />
+            &nbsp;&nbsp;/&gt; <br />
+            &lt;/template&gt; <br />
+            <br />
+            &lt;script setup&gt; <br />
+            import &#123; ref &#125; from 'vue'; <br />
+            import UserCard from './UserCard.vue'; <br />
+            <br />
+            const user = ref(&#123; name: 'Иван', age: 25 &#125;); <br />
+            <br />
+            function onUpdateName(newName) &#123; <br />
+            &nbsp;&nbsp;user.value.name = newName; <br />
+            &nbsp;&nbsp;// тут может быть вызов API, обновление Pinia и т.д.
+            <br />
+            &#125; <br />
+            &lt;/script&gt; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>4. Глупые (dumb / presentational) компоненты</h4>
+          <p>
+            <strong>Глупые компоненты</strong> (dumb, presentational) — это
+            компоненты, которые отвечают только за отображение интерфейса и
+            простую UI‑логику (клики, ввод), но не хранят бизнес‑состояние и не
+            знают, откуда приходят данные и что с ними дальше происходит.
+          </p>
+          <p>
+            Они получают всё нужное через props и сообщают о взаимодействиях
+            через события (emit), оставаясь максимально переиспользуемыми и не
+            завязанными на конкретный контекст приложения.
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- UserCard.vue (глупый компонент) --&gt; <br />
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;div class=&quot;user-card&quot;&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;&#123;&#123; user.name
+            &#125;&#125;&lt;/h3&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Возраст: &#123;&#123; user.age
+            &#125;&#125;&lt;/p&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input v-model=&quot;localName&quot;
+            /&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;button
+            @click=&quot;emitUpdate&quot;&gt;Сохранить имя&lt;/button&gt; <br />
+            &nbsp;&nbsp;&lt;/div&gt; <br />
+            &lt;/template&gt; <br />
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            &lt;script setup&gt; <br />
+            import &#123; ref, watch &#125; from 'vue'; <br />
+            <br />
+            const props = defineProps(&#123; <br />
+            &nbsp;&nbsp;user: &#123; type: Object, required: true &#125; <br />
+            &#125;); <br />
+            <br />
+            const emit = defineEmits(['update-name']); <br />
+            <br />
+            const localName = ref(props.user.name); <br />
+            <br />
+            watch( <br />
+            &nbsp;&nbsp;() =&gt; props.user.name, <br />
+            &nbsp;&nbsp;(value) =&gt; &#123; localName.value = value; &#125;
+            <br />
+            ); <br />
+            <br />
+            function emitUpdate() &#123; <br />
+            &nbsp;&nbsp;emit('update-name', localName.value); <br />
+            &#125; <br />
+            &lt;/script&gt; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>5. Связь между понятиями</h4>
+          <ul>
+            <li>
+              Чаще всего контролируемые компоненты встречаются как раз в роли
+              «глупых» (presentational): они получают значения и коллбэки от
+              родителя и не решают бизнес‑задачи сами.
+            </li>
+            <li>
+              Неконтролируемые компоненты могут быть и умными, и глупыми, но их
+              сложнее предсказуемо тестировать и синхронизировать с общим
+              состоянием.
+            </li>
+            <li>
+              Умные компоненты обычно управляют контролируемыми дочерними
+              компонентами: держат состояние и передают значения/обработчики
+              вниз через props и события.
+            </li>
+          </ul>
+        </div>
+
+        <div class="subtopic">
+          <h4>6. Кратко</h4>
+          <ul>
+            <li>
+              Контролируемый компонент: состояние живёт в реактивных
+              данных/сторе, компонент только отображает и эмитит изменения.
+            </li>
+            <li>
+              Неконтролируемый компонент: часть состояния живёт в DOM или внутри
+              самого компонента и читается по запросу (через ref/метод).
+            </li>
+            <li>
+              Умный компонент: содержит бизнес‑логику, работает с API/Pinia,
+              решает, какие данные и события передать детям.
+            </li>
+            <li>
+              Глупый компонент: отвечает только за отображение и простую
+              UI‑логику, получает всё через props и эмитит события.
+            </li>
+            <li>
+              Хорошая архитектура старается разделять умные и глупые компоненты,
+              а форму и сложные UI‑состояния делать контролируемыми.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exam--card">
+        <h3>
+          8. Почему не рекомендуется использовать объект в качестве key в v-for?
+        </h3>
+
+        <div class="subtopic">
+          <h4>1. Зачем вообще нужен key в v-for</h4>
+          <p>
+            Атрибут <strong>key</strong> помогает Vue отличать элементы списка
+            друг от друга при обновлении: по ключу фреймворк понимает, какой
+            виртуальный элемент соответствует какому реальному DOM‑узлу.
+          </p>
+          <p>
+            Правильный key даёт Vue возможность переиспользовать и правильно
+            переставлять элементы, а не пересоздавать или «перепутывать» их при
+            изменении массива.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>2. Требования к хорошему key</h4>
+          <ul>
+            <li>
+              Должен быть <strong>примитивом</strong> (строка или число), а не
+              объектом или массивом.
+            </li>
+            <li>
+              Должен быть <strong>уникальным</strong> среди элементов одного
+              списка.
+            </li>
+            <li>
+              Должен быть <strong>стабильным</strong> — не меняться при каждом
+              рендере для одного и того же логического элемента.
+            </li>
+            <li>
+              Лучший вариант — это ID или другой стабильный идентификатор
+              сущности (например, <code>user.id</code>).
+            </li>
+          </ul>
+        </div>
+
+        <div class="subtopic">
+          <h4>3. Почему объект в качестве key — плохая идея</h4>
+          <p>
+            Если использовать объект как key (например,
+            <code>:key="item"</code>, где <code>item</code> — объект), то Vue
+            при каждом сравнении ключей будет опираться на ссылочное равенство,
+            а не на «содержимое» объекта.
+          </p>
+          <p>
+            Даже если поля объекта те же самые, но ссылка другая (новый объект),
+            Vue будет считать, что это уже другой элемент и может пересоздавать
+            DOM‑узлы или терять состояние вложенных компонентов.
+          </p>
+          <p>
+            Кроме того, объект не является простым и предсказуемым
+            идентификатором: сложно гарантировать его стабильность и
+            уникальность так же, как у строки или числа.
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Плохой пример --&gt; <br />
+            &lt;div v-for=&quot;item in items&quot; :key=&quot;item&quot;&gt;
+            <br />
+            &nbsp;&nbsp;&#123;&#123; item.name &#125;&#125; <br />
+            &lt;/div&gt; <br />
+            &lt;!-- key здесь — целый объект, ссылка на который легко меняется
+            при любых операциях с массивом --&gt; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>4. Возможные проблемы при использовании объекта в key</h4>
+          <ul>
+            <li>
+              Непредсказуемые перерисовки: Vue может заново создать компонент
+              вместо переиспользования, теряя его локальное состояние.
+            </li>
+            <li>
+              Сложности с анимациями и переходами:
+              <code>&lt;transition-group&gt;</code> опирается на key, и при
+              «прыгающих» ключах анимации будут ломаться.
+            </li>
+            <li>
+              Баги при редактировании/перетаскивании элементов: при изменении
+              порядка Vue может неправильно сопоставить элементы и «перемешать»
+              данные на экране.
+            </li>
+            <li>
+              Падение производительности: лишние уничтожения и пересоздания
+              DOM‑узлов и компонентов вместо аккуратной перестановки.
+            </li>
+          </ul>
+        </div>
+
+        <div class="subtopic">
+          <h4>5. Правильный подход к выбору key</h4>
+          <p>
+            Вместо объекта следует использовать уникальное примитивное поле: ID
+            записи, имя пользователя, комбинацию нескольких полей,
+            сериализованную в строку или индекс как крайний вариант.
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Хороший пример: используем item.id как key --&gt; <br />
+            &lt;div v-for=&quot;item in items&quot; :key=&quot;item.id&quot;&gt;
+            <br />
+            &nbsp;&nbsp;&#123;&#123; item.name &#125;&#125; <br />
+            &lt;/div&gt; <br />
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Если нет id, можно собрать стабильный ключ из нескольких
+            полей --&gt; <br />
+            &lt;div v-for=&quot;user in users&quot; :key=&quot;user.name + '-' +
+            user.email&quot;&gt; <br />
+            &nbsp;&nbsp;&#123;&#123; user.name &#125;&#125; <br />
+            &lt;/div&gt; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>6. Кратко</h4>
+          <ul>
+            <li>
+              key нужен, чтобы Vue правильно сопоставлял элементы списка при
+              обновлении и перестановке.
+            </li>
+            <li>
+              Хороший key — это примитив (строка/число), уникальный и стабильный
+              для элемента.
+            </li>
+            <li>
+              Объект как key опирается на ссылочное сравнение, из‑за чего Vue
+              легко «теряет» идентичность элементов и пересоздаёт компоненты.
+            </li>
+            <li>
+              Это ведёт к багам UI, некорректным анимациям, потере локального
+              состояния и лишним перерисовкам.
+            </li>
+            <li>
+              Поэтому рекомендуется всегда использовать примитивы: ID,
+              уникальные поля или их комбинации, а не объект целиком.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exam--card">
+        <h3>
+          9. Как Vue отслеживает зависимости и определяет, какие компоненты
+          необходимо обновить при изменении данных? (объяснить роль Proxy,
+          описать механизм effect, раскрыть принципы track и trigger)
+        </h3>
+
+        <div class="subtopic">
+          <h4>1. Общая идея реактивности и зависимостей</h4>
+          <p>
+            В Vue 3 каждый кусок реактивных данных (ref, reactive‑объект) может
+            использоваться в разных вычислениях и компонентах — эти вычисления
+            называют <strong>эффектами</strong> (effects): рендер компонента,
+            computed, watchEffect и т.п. [web:98][web:99][web:105]
+          </p>
+          <p>
+            При первом выполнении эффекта Vue запоминает, какие реактивные
+            свойства были прочитаны, а при их изменении система знает, какие
+            эффекты нужно пересчитать и какие компоненты перерисовать.
+            [web:98][web:103][web:105]
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>2. Роль Proxy и перехват get/set</h4>
+          <p>
+            В Vue 3 объекты делают реактивными с помощью <strong>Proxy</strong>:
+            вместо оригинального объекта используется прокси‑обёртка, которая
+            перехватывает операции чтения (<code>get</code>) и записи
+            (<code>set</code>). [web:98][web:99][web:104]
+          </p>
+          <p>
+            Внутри перехватчика <code>get</code> вызывается функция
+            <code>track(...)</code> для регистрации зависимости, а в
+            перехватчике <code>set</code> — <code>trigger(...)</code> для
+            оповещения подписчиков, что значение изменилось.
+            [web:98][web:100][web:101]
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            function reactive(obj) &#123; <br />
+            &nbsp;&nbsp;return new Proxy(obj, &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;get(target, key, receiver) &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;track(target, key); //
+            регистрируем зависимость <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return Reflect.get(target, key,
+            receiver); <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&#125;, <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;set(target, key, value, receiver) &#123;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const oldValue = target[key];
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const result =
+            Reflect.set(target, key, value, receiver); <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (oldValue !== value) &#123;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trigger(target,
+            key); // оповещаем эффекты <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#125; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return result; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&#125; <br />
+            &nbsp;&nbsp;&#125;); <br />
+            &#125; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>3. Что такое effect и как он работает</h4>
+          <p>
+            <strong>Effect</strong> — это функция, которая должна автоматически
+            выполниться при изменении зависимых данных: например, функция
+            рендера компонента, функция внутри <code>watchEffect</code> или
+            вычисление <code>computed</code>.
+          </p>
+          <p>
+            Когда Vue запускает эффект, он делает его «активным» (записывает в
+            переменную вроде <code>activeEffect</code>) и затем выполняет
+            функцию; при каждом чтении реактивного свойства в этот момент
+            <code>track</code> привязывает активный эффект к этому свойству.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            let activeEffect = null; <br />
+            <br />
+            function effect(fn) &#123; <br />
+            &nbsp;&nbsp;const runner = () =&gt; &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;activeEffect = runner; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;fn(); <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;activeEffect = null; <br />
+            &nbsp;&nbsp;&#125;; <br />
+            &nbsp;&nbsp;runner(); // сразу запускаем <br />
+            &nbsp;&nbsp;return runner; <br />
+            &#125; <br />
+            <br />
+            // Пример эффекта: <br />
+            const state = reactive(&#123; count: 0 &#125;); <br />
+            effect(() =&gt; &#123; <br />
+            &nbsp;&nbsp;console.log('count изменился:', state.count); <br />
+            &#125;); <br />
+            // При чтении state.count внутри effect будет зарегистрирована
+            зависимость <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>4. Механизм track: как регистрируются зависимости</h4>
+          <p>
+            <strong>track(target, key)</strong> вызывается при чтении
+            реактивного свойства и добавляет текущий активный эффект к списку
+            зависимостей этого свойства.
+          </p>
+          <p>
+            Для хранения зависимостей используется структура вида
+            <code>WeakMap → Map → Set</code>: <code>WeakMap</code> сопоставляет
+            реактивный объект с картой его свойств, а <code>Map</code> — имя
+            свойства с множеством эффектов, которые от него зависят.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            const targetMap = new WeakMap(); <br />
+            <br />
+            function track(target, key) &#123; <br />
+            &nbsp;&nbsp;if (!activeEffect) return; // если нет активного
+            эффекта, нечего связывать <br />
+            <br />
+            &nbsp;&nbsp;let depsMap = targetMap.get(target); <br />
+            &nbsp;&nbsp;if (!depsMap) &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;depsMap = new Map(); <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;targetMap.set(target, depsMap); <br />
+            &nbsp;&nbsp;&#125; <br />
+            <br />
+            &nbsp;&nbsp;let dep = depsMap.get(key); <br />
+            &nbsp;&nbsp;if (!dep) &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;dep = new Set(); // множество эффектов для
+            этого свойства <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;depsMap.set(key, dep); <br />
+            &nbsp;&nbsp;&#125; <br />
+            <br />
+            &nbsp;&nbsp;dep.add(activeEffect); // добавляем текущий эффект в
+            зависимости <br />
+            &#125; <br />
+          </p>
+
+          <p>
+            Итог: Vue знает, «это свойство → вот набор эффектов (рендеры,
+            computed, watchers), которые надо запустить при изменении».
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>5. Механизм trigger: как выполняются эффекты при изменении</h4>
+          <p>
+            <strong>trigger(target, key)</strong> вызывается при изменении
+            реактивного свойства (в Proxy‑set или в setter у ref) и находит все
+            эффекты, которые были зарегистрированы как зависящие от этого
+            свойства.
+          </p>
+          <p>
+            Затем <code>trigger</code> запускает эти эффекты: это может привести
+            к повторному рендеру компонента, пересчёту <code>computed</code> и
+            выполнению коллбэков watch/watchEffect.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            function trigger(target, key) &#123; <br />
+            &nbsp;&nbsp;const depsMap = targetMap.get(target); <br />
+            &nbsp;&nbsp;if (!depsMap) return; <br />
+            <br />
+            &nbsp;&nbsp;const dep = depsMap.get(key); <br />
+            &nbsp;&nbsp;if (!dep) return; <br />
+            <br />
+            &nbsp;&nbsp;dep.forEach(effectFn =&gt; &#123; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;effectFn(); // перезапускаем эффект <br />
+            &nbsp;&nbsp;&#125;); <br />
+            &#125; <br />
+            <br />
+            // При state.count++ будет вызван trigger(state, 'count'), <br />
+            // и все эффекты, зависящие от state.count, выполнятся заново.
+            <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>6. Как из этого следует обновление компонентов</h4>
+          <p>
+            Рендер компонента (его виртуальный DOM и шаблон) выполняется внутри
+            эффекта — поэтому при первом рендере все реактивные свойства,
+            прочитанные в шаблоне, автоматически регистрируются через
+            <code>track</code>.
+          </p>
+          <p>
+            Когда какое‑то из этих свойств меняется,
+            <code>trigger</code> вызывает эффект рендера, Vue пересобирает
+            виртуальный DOM для этого компонента и патчит настоящий DOM — в
+            результате на экране обновляются только те компоненты и участки DOM,
+            которые зависят от изменившихся данных.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>7. Кратко</h4>
+          <ul>
+            <li>
+              Vue 3 использует Proxy, чтобы перехватывать чтение и запись
+              реактивных свойств и вызывать <code>track</code>/<code
+                >trigger</code
+              >
+              автоматически.
+            </li>
+            <li>
+              Effect — это функция (рендер, computed, watcher), которая должна
+              автоматически запускаться при изменении использованных в ней
+              реактивных данных.
+            </li>
+            <li>
+              track(target, key) выполняется при чтении свойства и записывает
+              активный эффект в структуру зависимостей
+              <code>WeakMap → Map → Set</code>.
+            </li>
+            <li>
+              trigger(target, key) выполняется при записи свойства и
+              перезапускает все эффекты, которые зависят от этого свойства.
+            </li>
+            <li>
+              Так Vue точно знает, какие эффекты (и какие компоненты) нужно
+              обновить при изменении конкретных данных, и не трогает остальную
+              часть приложения.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exam--card">
+        <h3>
+          10. Почему после изменения реактивных данных во Vue нельзя сразу
+          работать с обновлённым DOM, и как nextTick() решает эту проблему?
+        </h3>
+
+        <div class="subtopic">
+          <h4>1. Почему DOM не обновляется сразу после изменения данных</h4>
+          <p>
+            Vue обновляет DOM <strong>асинхронно</strong>: после изменения
+            реактивных данных изменения в шаблоне не применяются мгновенно, а
+            попадают в очередь обновлений, которая выполняется чуть позже, в
+            «следующий тик» (следующий цикл события).
+          </p>
+          <p>
+            Это нужно, чтобы сгруппировать несколько изменений состояния в один
+            пакет и выполнить одну операцию обновления DOM, а не перерисовывать
+            компонент много раз за один тик JavaScript.
+          </p>
+          <p>
+            Поэтому сразу после <code>state.value++</code> разметка ещё старая:
+            рендер и патчинг DOM будут выполнены после того, как текущий стек
+            вызовов JS завершится и Vue выполнит запланированное обновление.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            const count = ref(0); <br />
+            const el = ref(null); <br />
+            <br />
+            function inc() &#123; <br />
+            &nbsp;&nbsp;count.value++; <br />
+            &nbsp;&nbsp;// Здесь DOM ещё не обновлён, el.value.innerText всё ещё
+            со старым значением <br />
+            &#125; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>2. Чем опасно работать с DOM сразу после изменения данных</h4>
+          <ul>
+            <li>
+              Вы можете читать размеры/позиции элементов (offsetHeight,
+              scrollHeight) ещё до того, как браузер перерассчитал layout и
+              применил новые узлы.
+            </li>
+            <li>
+              Код, который полагается на уже добавленный элемент (автоскролл
+              вниз, фокус, анимация), может работать по старому DOM и вести себя
+              некорректно.
+            </li>
+            <li>
+              Возникают «фантомные» баги: логика в JS уже думает, что элемент
+              появился/исчез, а в DOM это отобразится только чуть позже.
+            </li>
+          </ul>
+
+          <p class="code--block" data-lang="JS">
+            const items = ref([]); <br />
+            const listRef = ref(null); <br />
+            <br />
+            function addItem() &#123; <br />
+            &nbsp;&nbsp;items.value.push('новый элемент'); <br />
+            &nbsp;&nbsp;// Здесь v-for ещё не дорисовал элемент в DOM,
+            scrollHeight старое <br />
+            &nbsp;&nbsp;console.log('scrollHeight до обновления DOM:',
+            listRef.value.scrollHeight); <br />
+            &#125; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>3. Что делает nextTick()</h4>
+          <p>
+            Функция <strong>nextTick()</strong> позволяет выполнить код
+            <em>после того</em>, как Vue закончил текущий цикл обновления DOM:
+            то есть после того, как все реактивные изменения, сделанные в этом
+            тике, уже отрисованы в реальном DOM.
+          </p>
+          <p>
+            Технически <code>nextTick</code> ставит колбэк (или промис) в
+            очередь микрозадач, которая выполняется после того, как Vue закончит
+            патчинг DOM в этом цикле.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            import &#123; ref, nextTick &#125; from 'vue'; <br />
+            <br />
+            const items = ref([]); <br />
+            const listRef = ref(null); <br />
+            <br />
+            async function addItem() &#123; <br />
+            &nbsp;&nbsp;items.value.push('новый элемент'); <br />
+            <br />
+            &nbsp;&nbsp;await nextTick(); <br />
+            &nbsp;&nbsp;// Здесь DOM уже обновлён, v-for дорисовал новый элемент
+            <br />
+            &nbsp;&nbsp;const el = listRef.value; <br />
+            &nbsp;&nbsp;el.scrollTop = el.scrollHeight; // теперь можно
+            корректно скроллить вниз <br />
+            &#125; <br />
+          </p>
+
+          <p>
+            После <code>await nextTick()</code> или
+            <code>nextTick(() =&gt; ...)</code> можно безопасно читать и
+            изменять DOM, исходя из нового состояния.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>4. Типичные случаи использования nextTick()</h4>
+          <ul>
+            <li>
+              Автоскролл в чатах/списках после добавления нового сообщения или
+              элемента.
+            </li>
+            <li>
+              Установка фокуса на только что появившийся input/кнопку (после
+              условного рендера v-if/v-for).
+            </li>
+            <li>
+              Измерение размеров/позиции элементов после изменения списка или
+              состояния (для анимаций, вычисления высоты и т.п.).
+            </li>
+            <li>
+              Работа со сторонними библиотеками, которые должны
+              инициализироваться по уже обновлённому DOM.
+            </li>
+          </ul>
+        </div>
+
+        <div class="subtopic">
+          <h4>5. Кратко</h4>
+          <ul>
+            <li>
+              Vue обновляет DOM не сразу при изменении реактивных данных, а
+              асинхронно, пакетируя изменения в один цикл обновления.
+            </li>
+            <li>
+              Сразу после изменения состояния разметка ещё старая, поэтому
+              чтение/манипуляции с DOM могут использовать устаревшую структуру.
+            </li>
+            <li>
+              <strong>nextTick()</strong> планирует выполнение кода после
+              завершения текущего цикла обновления DOM, когда все изменения уже
+              применены.
+            </li>
+            <li>
+              Используя <code>await nextTick()</code>, мы гарантируем, что
+              работаем с актуальным DOM: можно корректно скроллить, мерить
+              размеры, ставить фокус и инициализировать плагины.
+            </li>
+            <li>
+              Поэтому после изменения реактивных данных, когда нужно оперировать
+              уже обновлённым DOM, следует использовать <code>nextTick()</code>,
+              а не полагаться на немедленное обновление.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exam--card">
+        <h3>
+          11. Сравните подход Virtual DOM и No Virtual DOM. Какую проблему
+          изначально решал Virtual DOM. Почему отказываются от Virtual DOM
+        </h3>
+
+        <div class="subtopic">
+          <h4>1. Что такое Virtual DOM и No Virtual DOM</h4>
+          <p>
+            <strong>Virtual DOM</strong> — это лёгкое JS‑представление дерева
+            интерфейса в памяти: при каждом рендере фреймворк строит виртуальное
+            дерево и сравнивает его с предыдущим, чтобы понять, какие
+            минимальные изменения нужно применить к реальному DOM.
+          </p>
+          <p>
+            Подход <strong>No Virtual DOM</strong> (Svelte, Solid и др.)
+            старается не держать общее виртуальное дерево, а генерировать
+            точечные операции над DOM «напрямую»: компилятор или тонкая
+            реактивность заранее знает, какие узлы и когда нужно обновить, без
+            глобового diff виртуальных деревьев.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            // Условно: Virtual DOM-подход <br />
+            render() &#123; <br />
+            &nbsp;&nbsp;const newVTree = view(state); <br />
+            &nbsp;&nbsp;patch(oldVTree, newVTree); // diff + минимальные
+            изменения в DOM <br />
+            &nbsp;&nbsp;oldVTree = newVTree; <br />
+            &#125; <br />
+            <br />
+            // No Virtual DOM-подход (упрощённо) <br />
+            count.subscribe((value) =&gt; &#123; <br />
+            &nbsp;&nbsp;domNode.textContent = value; // сразу знаем, что и где
+            менять <br />
+            &#125;); <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>2. Какую проблему изначально решал Virtual DOM</h4>
+          <ul>
+            <li>
+              <strong>Сложность ручного управления DOM</strong>: раньше код был
+              завален императивными операциями (find элемент, изменить текст,
+              класс, удалить/добавить узлы), что приводило к спагетти‑логике и
+              ошибкам при росте проекта.
+            </li>
+            <li>
+              <strong>Дороговизна частых операций с DOM</strong>: прямые частые
+              изменения DOM дорого обходятся по производительности; Virtual DOM
+              позволяет группировать изменения и минимизировать количество
+              реальных операций.
+            </li>
+            <li>
+              <strong>Простая модель программирования</strong>: с Virtual DOM
+              можно думать в режиме «опиши, как должен выглядеть UI при таком
+              состоянии», а библиотека сама решит, как обновить DOM. Это
+              уменьшает количество багов и упрощает разработку.
+            </li>
+          </ul>
+        </div>
+
+        <div class="subtopic">
+          <h4>3. Суть Virtual DOM-подхода</h4>
+          <p>
+            При изменении состояния фреймворк строит новое виртуальное дерево,
+            сравнивает его с предыдущим (diff), находит отличающиеся ветки и
+            применяет минимальный набор операций к реальному DOM.
+          </p>
+          <p>
+            Это даёт детерминированные обновления: можно много раз
+            «перерисовывать» виртуальное дерево в JS, а реальные изменения в DOM
+            будут сделаны пакетно и оптимизировано.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            const oldTree = render(oldState); <br />
+            const newTree = render(newState); <br />
+            const patches = diff(oldTree, newTree); <br />
+            applyPatches(domRoot, patches); <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>4. Подход No Virtual DOM: что он делает иначе</h4>
+          <p>
+            В подходе <strong>No Virtual DOM</strong> идея в том, чтобы вообще
+            не строить и не диффать большие виртуальные деревья на каждый
+            апдейт.
+          </p>
+          <p>
+            Вместо этого компилятор или реактивная система заранее знает, какие
+            конкретно части DOM зависят от каких переменных, и при изменении
+            переменной сразу выполняет точечное обновление нужного узла.
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            // Псевдокод компилируемого подхода <br />
+            const span = document.createElement('span'); <br />
+            span.textContent = count; <br />
+            <br />
+            count.subscribe((value) =&gt; &#123; <br />
+            &nbsp;&nbsp;span.textContent = value; // нет общего diff, сразу
+            меняем нужный узел <br />
+            &#125;); <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>5. Почему отказываются от Virtual DOM (или ограничивают его)</h4>
+          <ul>
+            <li>
+              <strong>Добавляет свой оверхед</strong>: сам расчёт виртуального
+              дерева и diff — это тоже немаленькая работа в JS. Для больших
+              интерфейсов и частых апдейтов это может становиться узким местом.
+            </li>
+            <li>
+              <strong>Не всегда максимально эффективен</strong>: тонкая
+              реактивность или компиляция могут сразу «стрелять» в нужный
+              DOM‑узел, не тратя время на проход по всему дереву и сравнение.
+            </li>
+            <li>
+              <strong>Сложность реализации и размер бандла</strong>: полноценный
+              Virtual DOM‑движок усложняет код фреймворка и увеличивает размер
+              библиотеки, тогда как компилируемые решения могут генерировать
+              более простой и узкоспециализированный JS.
+            </li>
+            <li>
+              <strong>Новые подходы дают лучшую производительность</strong>:
+              современные фреймворки показывают, что можно добиться равной или
+              лучшей скорости без общего Virtual DOM, за счёт предварительной
+              компиляции и более прямого управления DOM.
+            </li>
+            <li>
+              <strong
+                >Ментальная модель не обязана быть привязана к Virtual
+                DOM</strong
+              >: можно сохранить декларативный стиль «UI = f(state)», но под
+              капотом реализовать его без диффинга двух деревьев.
+            </li>
+          </ul>
+        </div>
+
+        <div class="subtopic">
+          <h4>6. Кратко</h4>
+          <ul>
+            <li>
+              Virtual DOM — это in-memory дерево, которое позволяет декларативно
+              описывать UI и эффективно минимизировать количество операций над
+              реальным DOM.
+            </li>
+            <li>
+              Изначально он решал проблему сложного и дорогого ручного
+              управления DOM: сгруппировал выполнение изменений и упростил
+              модель программирования.
+            </li>
+            <li>
+              Подход No Virtual DOM избегает общего диффинга: использует
+              компиляцию или точечную реактивность, чтобы обновлять только те
+              узлы, которые зависят от изменившихся данных.
+            </li>
+            <li>
+              От Virtual DOM частично отказываются, потому что его собственный
+              оверхед и diffинг не всегда оптимальны по сравнению с более
+              прямыми, компилируемыми подходами.
+            </li>
+            <li>
+              Современные фреймворки показывают, что можно сохранить удобную
+              декларативную модель UI, не опираясь на общий Virtual DOM, и при
+              этом выиграть в производительности и размере бандла.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exam--card">
+        <h3>12. Что такое slots и какие типы slots существуют?</h3>
+
+        <div class="subtopic">
+          <h4>1. Что такое slots</h4>
+          <p>
+            <strong>Slots</strong> во Vue — это «места для вставки контента»
+            внутри компонента: дочерний компонент оставляет в шаблоне «дырки»
+            (слоты), а родительский компонент может заполнить эти места своим
+            произвольным HTML, разметкой и другими компонентами.
+          </p>
+          <p>
+            Слоты позволяют делать компоненты более гибкими и переиспользуемыми:
+            структура и логика остаются в дочернем компоненте, а конкретный
+            контент в определённых областях задаётся родителем.
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- ChildComponent.vue --&gt; <br />
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;div class=&quot;card&quot;&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;slot&gt;Дефолтный текст&lt;/slot&gt;
+            <br />
+            &nbsp;&nbsp;&lt;/div&gt; <br />
+            &lt;/template&gt; <br />
+            <br />
+            &lt;!-- Parent.vue --&gt; <br />
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;ChildComponent&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Свой контент внутри
+            карточки&lt;/p&gt; <br />
+            &nbsp;&nbsp;&lt;/ChildComponent&gt; <br />
+            &lt;/template&gt; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>2. Default slot (дефолтный слот)</h4>
+          <p>
+            <strong>Default slot</strong> (дефолтный слот) — это слот без имени.
+            Он используется, когда компонент имеет одну основную область для
+            пользовательского контента.
+          </p>
+          <p>
+            Если родитель не передал контент в слот, можно указать дефолтное
+            содержимое внутри <code>&lt;slot&gt;...&lt;/slot&gt;</code>, которое
+            будет использовано как запасной вариант.
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Дочерний компонент --&gt; <br />
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;div class=&quot;alert&quot;&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;slot&gt;Сообщение по
+            умолчанию&lt;/slot&gt; <br />
+            &nbsp;&nbsp;&lt;/div&gt; <br />
+            &lt;/template&gt; <br />
+            <br />
+            &lt;!-- Родительский компонент --&gt; <br />
+            &lt;Alert&gt; <br />
+            &nbsp;&nbsp;&lt;strong&gt;Внимание!&lt;/strong&gt; Что-то произошло.
+            <br />
+            &lt;/Alert&gt; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>3. Named slots (именованные слоты)</h4>
+          <p>
+            <strong>Named slots</strong> позволяют определить в компоненте
+            несколько разных областей для контента — каждая область имеет своё
+            имя, и родитель может заполнять их независимо друг от друга.
+          </p>
+          <p>
+            Именованные слоты объявляются через
+            <code>&lt;slot name="header"&gt;</code> и подобные, а в родителе
+            контент передаётся через
+            <code>&lt;template v-slot:header&gt;</code> или сокращение
+            <code>#header</code>.
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Layout.vue --&gt; <br />
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;header&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;slot
+            name=&quot;header&quot;&gt;Заголовок по умолчанию&lt;/slot&gt;
+            <br />
+            &nbsp;&nbsp;&lt;/header&gt; <br />
+            &nbsp;&nbsp;&lt;main&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;slot&gt;Основной контент по
+            умолчанию&lt;/slot&gt; <br />
+            &nbsp;&nbsp;&lt;/main&gt; <br />
+            &nbsp;&nbsp;&lt;footer&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;slot name=&quot;footer&quot;&gt;Футер по
+            умолчанию&lt;/slot&gt; <br />
+            &nbsp;&nbsp;&lt;/footer&gt; <br />
+            &lt;/template&gt; <br />
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Родитель --&gt; <br />
+            &lt;Layout&gt; <br />
+            &nbsp;&nbsp;&lt;template #header&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Мой заголовок&lt;/h1&gt; <br />
+            &nbsp;&nbsp;&lt;/template&gt; <br />
+            <br />
+            &nbsp;&nbsp;&lt;p&gt;Основной контент страницы&lt;/p&gt; <br />
+            <br />
+            &nbsp;&nbsp;&lt;template #footer&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;small&gt;Мой кастомный
+            футер&lt;/small&gt; <br />
+            &nbsp;&nbsp;&lt;/template&gt; <br />
+            &lt;/Layout&gt; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>4. Scoped slots (слоты с параметрами / пропсами)</h4>
+          <p>
+            <strong>Scoped slots</strong> (слоты с областью видимости) позволяют
+            дочернему компоненту передать данные в слот, чтобы родитель мог
+            использовать эти данные при рендере своего контента внутри этого
+            слота.
+          </p>
+          <p>
+            Дочерний компонент «пробрасывает» данные через атрибуты
+            <code>&lt;slot :user="user"&gt;</code>, а родитель принимает их
+            через <code>v-slot="slotProps"</code> и использует внутри шаблона,
+            как обычные переменные.
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- ChildList.vue --&gt; <br />
+            &lt;template&gt; <br />
+            &nbsp;&nbsp;&lt;ul&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li v-for=&quot;user in users&quot;
+            :key=&quot;user.id&quot;&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;slot
+            :user=&quot;user&quot;&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123;&#123;
+            user.name &#125;&#125; &lt;!-- дефолтный рендер --&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/slot&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt; <br />
+            &nbsp;&nbsp;&lt;/ul&gt; <br />
+            &lt;/template&gt; <br />
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Родитель --&gt; <br />
+            &lt;ChildList v-slot=&quot;slotProps&quot;&gt; <br />
+            &nbsp;&nbsp;&lt;strong&gt;&#123;&#123; slotProps.user.name
+            &#125;&#125;&lt;/strong&gt; (&#123;&#123; slotProps.user.email
+            &#125;&#125;) <br />
+            &lt;/ChildList&gt; <br />
+          </p>
+
+          <p>
+            Таким образом, дочерний компонент управляет тем, какие данные
+            доступны в слоте, а родитель управляет тем, КАК эти данные
+            отображаются.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>5. Итоги по типам слотов</h4>
+          <ul>
+            <li>
+              <strong>Default slot</strong> — один основной слот без имени, для
+              простых случаев «вставить контент внутрь компонента».
+            </li>
+            <li>
+              <strong>Named slots</strong> — несколько слотов с именами для
+              сложных шаблонов (header, footer, sidebar и т.п.).
+            </li>
+            <li>
+              <strong>Scoped slots</strong> — слоты, которым дочерний компонент
+              передаёт данные (slot props), а родитель использует эти данные при
+              рендере контента.
+            </li>
+            <li>
+              Именованный слот может одновременно быть и scoped (именованный
+              scoped slot), когда у слота есть и имя, и пропсы.
+            </li>
+            <li>
+              Slots — один из основных механизмов построения гибких,
+              переиспользуемых и настраиваемых компонентов во Vue.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exam--card">
+        <h3>13. Что такое SSG, SSR, CSR? Что такое гидрация?</h3>
+
+        <div class="subtopic">
+          <h4>1. Общая идея: где и когда рендерится HTML</h4>
+          <p>
+            SSG, SSR и CSR — это три подхода к тому, <strong>где</strong> и
+            <strong>когда</strong> генерируется HTML‑разметка страницы: заранее
+            на этапе сборки, на сервере при запросе или в браузере после
+            загрузки.
+          </p>
+          <p>
+            Гидрация связана с SSR/SSG и описывает момент, когда уже готовый
+            HTML в браузере «оживает» и становится интерактивным благодаря
+            JavaScript.
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>2. CSR — Client-Side Rendering</h4>
+          <p>
+            При <strong>CSR</strong> сервер отдаёт почти пустой HTML (обычно
+            только корневой <code>&lt;div id="app"&gt;</code>) и большой
+            JS‑бандл; весь реальный HTML строится уже в браузере после загрузки
+            и выполнения JavaScript. [web:137][web:140][web:144]
+          </p>
+          <p>
+            Такой подход типичен для SPA: первый экран может загружаться
+            медленнее, но приложение очень интерактивно, а переходы между
+            страницами быстрые, потому что всё происходит на клиенте.
+            [web:139][web:140][web:144]
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Ответ сервера при CSR --&gt; <br />
+            &lt;html&gt; <br />
+            &nbsp;&nbsp;&lt;body&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;script
+            src=&quot;/assets/app.js&quot;&gt;&lt;/script&gt; <br />
+            &nbsp;&nbsp;&lt;/body&gt; <br />
+            &lt;/html&gt; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>3. SSG — Static Site Generation</h4>
+          <p>
+            При <strong>SSG</strong> HTML‑страницы генерируются
+            <em>заранее</em> на этапе сборки проекта (build time): для каждого
+            маршрута фреймворк создаёт готовый статический HTML, который потом
+            просто отдаётся как файлы. [web:137][web:139][web:141][web:144]
+          </p>
+          <p>
+            Это даёт очень быстрый первый ответ от сервера и хорошее SEO, так
+            как страница уже содержит контент; динамика и интерактивность
+            добавляются поверх через JS (часто тоже через гидрацию).
+            [web:137][web:139][web:141]
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Пример готового HTML при SSG --&gt; <br />
+            &lt;html&gt; <br />
+            &nbsp;&nbsp;&lt;body&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div id=&quot;app&quot;&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Статья&lt;/h1&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Контент сгенерирован на
+            этапе сборки.&lt;/p&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;script
+            src=&quot;/assets/app.js&quot;&gt;&lt;/script&gt; <br />
+            &nbsp;&nbsp;&lt;/body&gt; <br />
+            &lt;/html&gt; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>4. SSR — Server-Side Rendering</h4>
+          <p>
+            При <strong>SSR</strong> HTML‑страница генерируется на сервере
+            <em>на каждый запрос</em>: при заходе пользователя фреймворк
+            запускает рендер компонента на сервере и возвращает уже заполненный
+            HTML. [web:137][web:139][web:140][web:144]
+          </p>
+          <p>
+            Это даёт быстрый первый отрисованный экран и хорошее SEO для
+            динамического контента; после загрузки фронтенд‑JS «подхватывает»
+            этот HTML и делает его интерактивным через гидрацию.
+            [web:139][web:140][web:146]
+          </p>
+
+          <p class="code--block" data-lang="HTML">
+            &lt;!-- Ответ сервера при SSR --&gt; <br />
+            &lt;div id=&quot;app&quot; data-server-rendered=&quot;true&quot;&gt;
+            <br />
+            &nbsp;&nbsp;&lt;h1&gt;Привет, Иван&lt;/h1&gt; <br />
+            &nbsp;&nbsp;&lt;p&gt;Это HTML, сгенерированный на сервере.&lt;/p&gt;
+            <br />
+            &lt;/div&gt; <br />
+            &lt;script src=&quot;/assets/app.js&quot;&gt;&lt;/script&gt; <br />
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>5. Что такое гидрация</h4>
+          <p>
+            <strong>Гидрация</strong> — это процесс, при котором уже
+            сгенерированный сервером (SSR/SSG) HTML в браузере становится
+            интерактивным: фреймворк заново запускает приложение на клиенте,
+            сопоставляет виртуальное дерево с текущим DOM и «пришивает»
+            обработчики событий и состояние.
+            [web:142][web:143][web:145][web:146]
+          </p>
+          <p>
+            Проще: сервер отдал готовую, но «мёртвую» HTML‑страницу, а гидрация
+            — это этап, когда клиентский JS восстанавливает логику: клики,
+            формы, реактивность, маршрутизацию и т.п.
+            [web:142][web:145][web:146]
+          </p>
+
+          <p class="code--block" data-lang="JS">
+            // Условный пример для Vue SSR <br />
+            import &#123; createSSRApp &#125; from 'vue'; <br />
+            import App from './App.vue'; <br />
+            <br />
+            const app = createSSRApp(App); <br />
+            // В HTML уже есть разметка #app, сгенерированная на сервере <br />
+            app.mount('#app'); // вместо полного перерендера выполняется
+            гидрация <br />
+          </p>
+
+          <p>
+            Считается, что при классической гидрации страница как бы
+            «отправляется дважды»: сначала как HTML, а потом как JS‑код, который
+            ещё раз проходит по компонентам, чтобы восстановить состояние и
+            обработчики. [web:142][web:145]
+          </p>
+        </div>
+
+        <div class="subtopic">
+          <h4>6. Кратко</h4>
+          <ul>
+            <li>
+              <strong>CSR</strong>: HTML собирается в браузере после загрузки
+              JS; хорошо для SPA и очень интерактивных приложений, хуже первый
+              рендер и SEO.
+            </li>
+            <li>
+              <strong>SSG</strong>: HTML генерируется на этапе сборки и отдаётся
+              как статический; очень быстрый первый байт и отличное SEO для
+              относительно статического контента.
+            </li>
+            <li>
+              <strong>SSR</strong>: HTML генерируется на сервере при каждом
+              запросе; хорошо подходит для динамических страниц с хорошим SEO.
+            </li>
+            <li>
+              <strong>Гидрация</strong>: этап, когда уже готовый HTML (из
+              SSR/SSG) подключается к клиентскому JS, становятся активными
+              обработчики событий, восстанавливается реактивность и состояние.
+            </li>
+            <li>
+              Все подходы можно комбинировать: одна часть сайта — SSG, другая —
+              SSR, а внутри страниц отдельные виджеты работают как CSR.
+            </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section>
-      <h3>Вопросы по VUE</h3>
-      <ol>
-        <li>
-          Чем отличается computed от обычной функции? Когда и зачем использовать
-          watch, если есть computed? Что такое ref и reactive.
-        </li>
-        <li>
-          Что делает директива v-model и как она работает? Как v-model работает
-          на кастомных компонентах. Как передать данные от родительского
-          компонента к дочернему и обратно?
-        </li>
-        <li>
-          Что такое props drilling и почему он считается архитектурной
-          проблемой? Какими способами можно решить эту проблему.
-        </li>
-        <li>
-          Чем принципиально отличается механизм provide / inject от
-          использования глобального состояния через Pinia?
-        </li>
-        <li>
-          В чём принципиальная разница между состоянием приложения (App State -
-          Pinia) и кэшем данных (Cache - TanStack Query)?
-        </li>
-        <li>Какие основные хуки жизненного цикла существуют в Vue?</li>
-        <li>
-          Что понимается под контролируемыми и неконтролируемыми компонентами?
-          Объяснить разницу между умными и глупыми компонентами.
-        </li>
-        <li>
-          Почему не рекомендуется использовать объект в качестве key в v-for?
-        </li>
-        <li>
-          Как Vue отслеживает зависимости и определяет, какие компоненты
-          необходимо обновить при изменении данных? (объяснить роль Proxy,
-          описать механизм effect, раскрыть принципы track и trigger)
-        </li>
-        <li>
-          Почему после изменения реактивных данных во Vue нельзя сразу работать
-          с обновлённым DOM, и как nextTick() решает эту проблему?
-        </li>
-        <li>
-          Сравните подход Virtual DOM и No Virtual DOM. Какую проблему
-          изначально решал Virtual DOM. Почему отказываются от Virtual DOM
-        </li>
-        <li>Что такое slots и какие типы slots существуют?</li>
-        <li>Что такое SSG, SSR, CSR? Что такое гидрация?</li>
-      </ol>
+    <section class="section practice">
+      <div class="exam--card">
+        <h3>ПРАКТИКА</h3>
+        <p>практический пример vue js:</p>
+        <p class="code--block" data-lang="JS">
+          import { ref } from 'vue' <br />
+          const count = ref(0) <br />
+          function increment() { <br />
+          count++ <br />
+          } <br />
+        </p>
+        <p>
+          Почему этот код не работает и как его исправить? <br />
+
+          Практика будет в таком же духе. Поэтому потренируйтесь с llm на
+          базовых примерах. <br />
+
+          практический пример БЭМ: <br />
+
+          Описать по БЭМ. Примеры на практике могут быть сложнее, включая CSS и
+          внешнюю геометрию. <br />
+        </p>
+        <p class="code--block" data-lang="HTML">
+          &lt;article&gt;<br />
+          &lt;h3&gt;Заголовок поста&lt;/h3&gt;<br />
+          &lt;p&gt;Текст краткого содержания поста. Здесь может быть несколько
+          предложений, описывающих основную тему...&lt;/p&gt;<br />
+          &lt;/article&gt;
+        </p>
+      </div>
     </section>
 
     <section>
-      <h3>ПРАКТИКА</h3>
-      <p>
-        практический пример vue js: import { ref } from 'vue' <br />
-        const count = ref(0) <br />
-        function increment() { <br />
-        count++ <br />
-        } <br />
-
-        Почему этот код не работает и как его исправить? <br />
-
-        Практика будет в таком же духе. Поэтому потренируйтесь с llm на базовых
-        примерах. <br />
-
-        практический пример БЭМ: <br />
-
-        Описать по БЭМ. Примеры на практике могут быть сложнее, включая CSS и
-        внешнюю геометрию. <br />
-
-        &lt;article&gt;<br />
-        &lt;h3&gt;Заголовок поста&lt;/h3&gt;<br />
-        &lt;p&gt;Текст краткого содержания поста. Здесь может быть несколько
-        предложений, описывающих основную тему...&lt;/p&gt;<br />
-        &lt;/article&gt;
-      </p>
-    </section>
-
-    <section>
-      <p class="red--text">И Вопросы со среза от Юли не забудь</p>
+      <ul id="menu">
+        <li data-action="open">Открыть</li>
+        <li data-action="save">Сохранить</li>
+        <li data-action="exit">Выход</li>
+      </ul>
     </section>
 
     <section>

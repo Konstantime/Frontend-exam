@@ -50,11 +50,11 @@
 const peshka = document.getElementById("testLearningJS");
 peshka.textContent = "Изменено без кнопки!";
 
-const btn = document.getElementById("changeTest");
+// const btn = document.getElementById("changeTest");
 
-btn.addEventListener("click", () => {
-  peshka.textContent = "Изменено кнопкой!";
-});
+// btn.addEventListener("click", () => {
+// peshka.textContent = "Изменено кнопкой!";
+// });
 
 const btnTest = document.getElementById("btnTest");
 const btnTestText = document.getElementById("btnTestText");
@@ -100,3 +100,45 @@ btnAdd.addEventListener("click", () => {
   // peshkaList.createElement("li")
   taskInput.value = "";
 });
+
+
+// Я готовлюсь к экзамену по фронтенду. JS HTML CSS я уже примерно знаю. Сейчас нужно изучить VUE. 
+
+// Смотри: я буду скидывать тебе темы билетов из этой темы. Ты должен будешь скидывать мне конспект для подготовки к этой теме.
+// Но при этом ты должен скидывать конспекты не в виде текста, а в виде HTML кода, чтобы я мог просто брать твой код и прям целиком вставлять его в свой сайт.CSS
+// Особенности моего сайта: 
+
+// каждый билет должен билет заключен в блок div и при этом обладать классом "exam--card"
+
+// каждую подтему необходимо помечать классом "subtopic", а также она также должна быть заключена в блок div
+
+// заголовок самого билета в формате h3
+
+// если вдруг нужно вставлять блоки кода, то вот пример: 
+
+// <p class="code--block" data-lang="HTML">
+//   &lt;ul id=&quot;list&quot;&gt; <br />
+//   &nbsp;&nbsp;&lt;li data-id=&quot;1&quot;&gt;Элемент 1&lt;/li&gt;
+//   <br />
+//   &nbsp;&nbsp;&lt;li data-id=&quot;2&quot;&gt;Элемент 2&lt;/li&gt;
+//   <br />
+//   &nbsp;&nbsp;&lt;li data-id=&quot;3&quot;&gt;Элемент 3&lt;/li&gt;
+//   <br />
+//   &lt;/ul&gt;
+// </p>
+
+// (data-lang бывает равным как "HTML", так и "JS" "CSS")
+
+// Кратко по содержанию: каждый билет состоит из заголовка, подтем и еще одной подтемы "Кратко" (в которой все повторяется, но в краткой форме)
+
+
+
+
+Сейчас я готовлюсь к экзамену по фронтенду. 
+Что мне нужно сделать повторить всю теорию и прогнаться по ней много раз чтобы вызубрить,
+аналогичная ситуация с практикой (крайне важно нарешать кучу задач практических)
+
+Теорию я немного уже изучил, попрактковал JS HTML CSS. VUE пока что не трогал
+
+
++у меня уже есть целый сайт который я сам написал для подготовки к этому экзамену.
