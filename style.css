@@ -185,6 +185,7 @@ p {
 /* HTML/CSS — оранжевая рамка */
 .section.html-css .exam--card {
   border-color: rgb(255, 140, 0);
+  box-shadow: 0 0 10px rgba(235, 251, 8, 0.6);
 }
 
 .section.js .exam--card {
@@ -212,6 +213,7 @@ p {
     rgb(255, 140, 0) 8px,
     transparent 8px
   );
+  box-shadow: 0 0 10px rgba(235, 251, 8, 0.6);
 }
 
 /* JS — неоново-розовые подтемы */
@@ -247,3 +249,5 @@ p {
     transparent 8px
   );
 }
+
+/* привет --------------------------------------------------------------------*/
